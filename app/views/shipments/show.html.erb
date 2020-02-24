@@ -1,0 +1,64 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Code:</strong>
+  <%= @shipment.code %>
+</p>
+
+<p>
+  <strong>Tracking:</strong>
+  <%= @shipment.tracking %>
+</p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @shipment.date %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @shipment.status %>
+</p>
+
+<p>
+  <strong>Carrier:</strong>
+  <%= @shipment.carrier %>
+</p>
+
+<p>
+  <strong>Amount:</strong>
+  <%= @shipment.amount %>
+</p>
+
+<p>
+  <strong>Shipment:</strong>
+  <%= @shipment.shipment %>
+</p>
+
+<p>
+  <strong>Product:</strong>
+  <%= @shipment.product %>
+</p>
+
+<p>
+  <strong>Weight:</strong>
+  <%= @shipment.weight %>
+</p>
+
+<p>
+  <strong>Identifier:</strong>
+  <%= @shipment.identifier %>
+</p>
+
+<p>
+  <strong>Receipt:</strong>
+  <%= @shipment.receipt %>
+</p>
+
+<p>
+  <strong>Note:</strong>
+  <%= @shipment.note %>
+</p>
+
+<%= link_to 'Edit', edit_shipment_path(@shipment) %> |
+<%= link_to 'Back', shipments_path %>

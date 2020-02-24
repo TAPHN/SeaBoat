@@ -1,0 +1,29 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  code: MyString
+  tracking: MyString
+  date: 2020-02-24
+  status: MyString
+  carrier: MyString
+  amount: 1
+  shipment: 1
+  product: MyString
+  weight: 9.99
+  identifier: MyString
+  receipt: 1
+  note: MyString
+
+two:
+  code: MyString
+  tracking: MyString
+  date: 2020-02-24
+  status: MyString
+  carrier: MyString
+  amount: 1
+  shipment: 1
+  product: MyString
+  weight: 9.99
+  identifier: MyString
+  receipt: 1
+  note: MyString
