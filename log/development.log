@@ -1645,3 +1645,85 @@ Processing by ShipmentsController#edit as HTML
 Completed 200 OK in 13ms (Views: 11.0ms | ActiveRecord: 0.1ms | Allocations: 11074)
 
 
+Started GET "/shipments/new" for ::1 at 2020-03-03 01:49:54 -0600
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ShipmentsController#new as HTML
+  Rendering shipments/new.html.erb within layouts/application
+  Rendered shipments/_form.html.erb (Duration: 13.7ms | Allocations: 7959)
+  Rendered shipments/new.html.erb within layouts/application (Duration: 14.9ms | Allocations: 8598)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 60ms (Views: 36.4ms | ActiveRecord: 2.6ms | Allocations: 33654)
+
+
+Started POST "/shipments" for ::1 at 2020-03-03 01:50:02 -0600
+Processing by ShipmentsController#create as HTML
+  Parameters: {"authenticity_token"=>"EzvKzgORCbql0V9R4CdhzIwGkVl8V2kiOMRzmNKZ+QoJgTzDgalLnABdlTdOnOqbdBKv6mC75eIhpojI+dTHqQ==", "shipment"=>{"code"=>"", "tracking"=>"", "date(1i)"=>"2020", "date(2i)"=>"3", "date(3i)"=>"3", "status"=>"", "carrier"=>"", "amount"=>"", "packages"=>"", "product"=>"", "weight"=>"", "length"=>"", "width"=>"", "height"=>"", "shipment"=>"", "note"=>""}, "commit"=>"Create Shipment"}
+  Rendering shipments/new.html.erb within layouts/application
+  Rendered shipments/_form.html.erb (Duration: 6.2ms | Allocations: 4545)
+  Rendered shipments/new.html.erb within layouts/application (Duration: 6.7ms | Allocations: 4653)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 17ms (Views: 13.0ms | ActiveRecord: 0.0ms | Allocations: 11470)
+
+
+Started GET "/shipments" for ::1 at 2020-03-03 01:50:29 -0600
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ShipmentsController#index as HTML
+  Rendering shipments/index.html.erb within layouts/application
+  [1m[36mShipment Load (0.2ms)[0m  [1m[34mSELECT "shipments".* FROM "shipments"[0m
+  ↳ app/views/shipments/index.html.erb:29
+  Rendered shipments/index.html.erb within layouts/application (Duration: 17.6ms | Allocations: 15045)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 27ms (Views: 22.1ms | ActiveRecord: 0.8ms | Allocations: 20814)
+
+
+Started GET "/shipments/new" for ::1 at 2020-03-03 01:50:30 -0600
+Processing by ShipmentsController#new as HTML
+  Rendering shipments/new.html.erb within layouts/application
+  Rendered shipments/_form.html.erb (Duration: 4.6ms | Allocations: 4177)
+  Rendered shipments/new.html.erb within layouts/application (Duration: 4.8ms | Allocations: 4284)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 10ms (Views: 9.5ms | ActiveRecord: 0.0ms | Allocations: 9278)
+
+
+Started POST "/shipments" for ::1 at 2020-03-03 01:50:34 -0600
+Processing by ShipmentsController#create as HTML
+  Parameters: {"authenticity_token"=>"n+BzMWRNsDu/Cl3kPdKV4qKc0dmafO//0Ly/4VcYd5iFWoU85nXyHRqGl4KTaR61WojvaoaQYz/J3kSxfFVJOw==", "shipment"=>{"code"=>"", "tracking"=>"", "date(1i)"=>"2020", "date(2i)"=>"3", "date(3i)"=>"3", "status"=>"", "carrier"=>"", "amount"=>"", "packages"=>"", "product"=>"", "weight"=>"", "length"=>"", "width"=>"", "height"=>"", "shipment"=>"", "note"=>""}, "commit"=>"Create Shipment"}
+  Rendering shipments/new.html.erb within layouts/application
+  Rendered shipments/_form.html.erb (Duration: 5.3ms | Allocations: 4662)
+  Rendered shipments/new.html.erb within layouts/application (Duration: 5.5ms | Allocations: 4768)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 13ms (Views: 10.1ms | ActiveRecord: 0.0ms | Allocations: 11722)
+
+
+Started GET "/shipments" for ::1 at 2020-03-03 01:50:58 -0600
+Processing by ShipmentsController#index as HTML
+  Rendering shipments/index.html.erb within layouts/application
+  [1m[36mShipment Load (0.1ms)[0m  [1m[34mSELECT "shipments".* FROM "shipments"[0m
+  ↳ app/views/shipments/index.html.erb:29
+  Rendered shipments/index.html.erb within layouts/application (Duration: 2.4ms | Allocations: 1788)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 7ms (Views: 6.7ms | ActiveRecord: 0.1ms | Allocations: 6743)
+
+
+Started GET "/shipments/1" for ::1 at 2020-03-03 01:51:02 -0600
+Processing by ShipmentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mShipment Load (0.2ms)[0m  [1m[34mSELECT "shipments".* FROM "shipments" WHERE "shipments"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/shipments_controller.rb:67:in `set_shipment'
+  Rendering shipments/show.html.erb within layouts/application
+  Rendered shipments/show.html.erb within layouts/application (Duration: 0.9ms | Allocations: 618)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 18ms (Views: 6.1ms | ActiveRecord: 0.2ms | Allocations: 13000)
+
+
+Started GET "/shipments" for ::1 at 2020-03-03 01:51:04 -0600
+Processing by ShipmentsController#index as HTML
+  Rendering shipments/index.html.erb within layouts/application
+  [1m[36mShipment Load (0.1ms)[0m  [1m[34mSELECT "shipments".* FROM "shipments"[0m
+  ↳ app/views/shipments/index.html.erb:29
+  Rendered shipments/index.html.erb within layouts/application (Duration: 2.8ms | Allocations: 1780)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 9ms (Views: 7.8ms | ActiveRecord: 0.1ms | Allocations: 6751)
+
+

@@ -1,5 +1,5 @@
 class Shipment < ApplicationRecord
-    validates :length, :width, presence: true
+    validates :length, :width, :height, presence: true
     def volumetric_weight
         if self.length && self.width
           self.volumetric_weight = length * width
