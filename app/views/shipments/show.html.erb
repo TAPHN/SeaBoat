@@ -1,6 +1,11 @@
 <p id="notice"><%= notice %></p>
 
 <p>
+  <strong>Id:</strong>
+  <%= @shipment.id %>
+</p>
+
+<p>
   <strong>Code:</strong>
   <%= @shipment.code %>
 </p>
@@ -31,8 +36,8 @@
 </p>
 
 <p>
-  <strong>Shipment:</strong>
-  <%= @shipment.shipment %>
+  <strong>Packages:</strong>
+  <%= @shipment.packages %>
 </p>
 
 <p>
@@ -46,13 +51,28 @@
 </p>
 
 <p>
-  <strong>Identifier:</strong>
-  <%= @shipment.identifier %>
+  <strong>Length:</strong>
+  <%= @shipment.length %>
 </p>
 
 <p>
-  <strong>Receipt:</strong>
-  <%= @shipment.receipt %>
+  <strong>Width:</strong>
+  <%= @shipment.width %>
+</p>
+
+<p>
+  <strong>Height:</strong>
+  <%= @shipment.height %>
+</p>
+
+<p>
+  <strong>Volumetric weight:</strong>
+  <%= @shipment.volumetric_weight %>
+</p>
+
+<p>
+  <strong>Shipment:</strong>
+  <%= @shipment.shipment %>
 </p>
 
 <p>

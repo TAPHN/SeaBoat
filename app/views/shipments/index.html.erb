@@ -5,17 +5,21 @@
 <table>
   <thead>
     <tr>
+      <th>Id</th>
       <th>Code</th>
       <th>Tracking</th>
       <th>Date</th>
       <th>Status</th>
       <th>Carrier</th>
       <th>Amount</th>
-      <th>Shipment</th>
+      <th>Packages</th>
       <th>Product</th>
       <th>Weight</th>
-      <th>Identifier</th>
-      <th>Receipt</th>
+      <th>Length</th>
+      <th>Width</th>
+      <th>Height</th>
+      <th>Volumetric weight</th>
+      <th>Shipment</th>
       <th>Note</th>
       <th colspan="3"></th>
     </tr>
@@ -24,17 +28,21 @@
   <tbody>
     <% @shipments.each do |shipment| %>
       <tr>
+        <td><%= shipment.id %></td>
         <td><%= shipment.code %></td>
         <td><%= shipment.tracking %></td>
         <td><%= shipment.date %></td>
         <td><%= shipment.status %></td>
         <td><%= shipment.carrier %></td>
         <td><%= shipment.amount %></td>
-        <td><%= shipment.shipment %></td>
+        <td><%= shipment.packages %></td>
         <td><%= shipment.product %></td>
         <td><%= shipment.weight %></td>
-        <td><%= shipment.identifier %></td>
-        <td><%= shipment.receipt %></td>
+        <td><%= shipment.length %></td>
+        <td><%= shipment.width %></td>
+        <td><%= shipment.height %></td>
+        <td><%= shipment.volumetric_weight %></td>
+        <td><%= shipment.shipment %></td>
         <td><%= shipment.note %></td>
         <td><%= link_to 'Show', shipment %></td>
         <td><%= link_to 'Edit', edit_shipment_path(shipment) %></td>
@@ -47,4 +55,3 @@
 <br>
 
 <%= link_to 'New Shipment', new_shipment_path %>
-

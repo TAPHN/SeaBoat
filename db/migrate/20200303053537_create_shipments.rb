@@ -7,11 +7,14 @@ class CreateShipments < ActiveRecord::Migration[6.0]
       t.string :status
       t.string :carrier
       t.integer :amount
-      t.integer :shipment
+      t.integer :packages
       t.string :product
       t.decimal :weight
-      t.string :identifier
-      t.integer :receipt
+      t.decimal :length
+      t.decimal :width
+      t.decimal :height
+      t.string :volumetric_weight
+      t.string :shipment
       t.string :note
 
       t.timestamps

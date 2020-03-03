@@ -18,14 +18,17 @@ class ShipmentsTest < ApplicationSystemTestCase
     fill_in "Carrier", with: @shipment.carrier
     fill_in "Code", with: @shipment.code
     fill_in "Date", with: @shipment.date
-    fill_in "Identifier", with: @shipment.identifier
+    fill_in "Height", with: @shipment.height
+    fill_in "Length", with: @shipment.length
     fill_in "Note", with: @shipment.note
+    fill_in "Packages", with: @shipment.packages
     fill_in "Product", with: @shipment.product
-    fill_in "Receipt", with: @shipment.receipt
     fill_in "Shipment", with: @shipment.shipment
     fill_in "Status", with: @shipment.status
     fill_in "Tracking", with: @shipment.tracking
+    fill_in "Volumetric weight", with: @shipment.volumetric_weight
     fill_in "Weight", with: @shipment.weight
+    fill_in "Width", with: @shipment.width
     click_on "Create Shipment"
 
     assert_text "Shipment was successfully created"
@@ -40,14 +43,17 @@ class ShipmentsTest < ApplicationSystemTestCase
     fill_in "Carrier", with: @shipment.carrier
     fill_in "Code", with: @shipment.code
     fill_in "Date", with: @shipment.date
-    fill_in "Identifier", with: @shipment.identifier
+    fill_in "Height", with: @shipment.height
+    fill_in "Length", with: @shipment.length
     fill_in "Note", with: @shipment.note
+    fill_in "Packages", with: @shipment.packages
     fill_in "Product", with: @shipment.product
-    fill_in "Receipt", with: @shipment.receipt
     fill_in "Shipment", with: @shipment.shipment
     fill_in "Status", with: @shipment.status
     fill_in "Tracking", with: @shipment.tracking
+    fill_in "Volumetric weight", with: @shipment.volumetric_weight
     fill_in "Weight", with: @shipment.weight
+    fill_in "Width", with: @shipment.width
     click_on "Update Shipment"
 
     assert_text "Shipment was successfully updated"

@@ -17,7 +17,7 @@ class ShipmentsControllerTest < ActionDispatch::IntegrationTest
 
   test "should create shipment" do
     assert_difference('Shipment.count') do
-      post shipments_url, params: { shipment: { amount: @shipment.amount, carrier: @shipment.carrier, code: @shipment.code, date: @shipment.date, identifier: @shipment.identifier, note: @shipment.note, product: @shipment.product, receipt: @shipment.receipt, shipment: @shipment.shipment, status: @shipment.status, tracking: @shipment.tracking, weight: @shipment.weight } }
+      post shipments_url, params: { shipment: { amount: @shipment.amount, carrier: @shipment.carrier, code: @shipment.code, date: @shipment.date, height: @shipment.height, length: @shipment.length, note: @shipment.note, packages: @shipment.packages, product: @shipment.product, shipment: @shipment.shipment, status: @shipment.status, tracking: @shipment.tracking, volumetric_weight: @shipment.volumetric_weight, weight: @shipment.weight, width: @shipment.width } }
     end
 
     assert_redirected_to shipment_url(Shipment.last)
@@ -34,7 +34,7 @@ class ShipmentsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update shipment" do
-    patch shipment_url(@shipment), params: { shipment: { amount: @shipment.amount, carrier: @shipment.carrier, code: @shipment.code, date: @shipment.date, identifier: @shipment.identifier, note: @shipment.note, product: @shipment.product, receipt: @shipment.receipt, shipment: @shipment.shipment, status: @shipment.status, tracking: @shipment.tracking, weight: @shipment.weight } }
+    patch shipment_url(@shipment), params: { shipment: { amount: @shipment.amount, carrier: @shipment.carrier, code: @shipment.code, date: @shipment.date, height: @shipment.height, length: @shipment.length, note: @shipment.note, packages: @shipment.packages, product: @shipment.product, shipment: @shipment.shipment, status: @shipment.status, tracking: @shipment.tracking, volumetric_weight: @shipment.volumetric_weight, weight: @shipment.weight, width: @shipment.width } }
     assert_redirected_to shipment_url(@shipment)
   end
 

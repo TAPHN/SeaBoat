@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_02_24_205947) do
+ActiveRecord::Schema.define(version: 2020_03_03_053537) do
 
   create_table "shipments", force: :cascade do |t|
     t.string "code"
@@ -19,11 +19,14 @@ ActiveRecord::Schema.define(version: 2020_02_24_205947) do
     t.string "status"
     t.string "carrier"
     t.integer "amount"
-    t.integer "shipment"
+    t.integer "packages"
     t.string "product"
     t.decimal "weight"
-    t.string "identifier"
-    t.integer "receipt"
+    t.decimal "length"
+    t.decimal "width"
+    t.decimal "height"
+    t.string "volumetric_weight"
+    t.string "shipment"
     t.string "note"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false

@@ -3,27 +3,33 @@
 one:
   code: MyString
   tracking: MyString
-  date: 2020-02-24
+  date: 2020-03-02
   status: MyString
   carrier: MyString
   amount: 1
-  shipment: 1
+  packages: 1
   product: MyString
   weight: 9.99
-  identifier: MyString
-  receipt: 1
+  length: 9.99
+  width: 9.99
+  height: 9.99
+  volumetric_weight: MyString
+  shipment: MyString
   note: MyString
 
 two:
   code: MyString
   tracking: MyString
-  date: 2020-02-24
+  date: 2020-03-02
   status: MyString
   carrier: MyString
   amount: 1
-  shipment: 1
+  packages: 1
   product: MyString
   weight: 9.99
-  identifier: MyString
-  receipt: 1
+  length: 9.99
+  width: 9.99
+  height: 9.99
+  volumetric_weight: MyString
+  shipment: MyString
   note: MyString

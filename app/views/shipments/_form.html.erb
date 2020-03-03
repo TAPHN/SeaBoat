@@ -42,8 +42,8 @@
   </div>
 
   <div class="field">
-    <%= form.label :shipment %>
-    <%= form.number_field :shipment %>
+    <%= form.label :packages %>
+    <%= form.number_field :packages %>
   </div>
 
   <div class="field">
@@ -57,18 +57,28 @@
   </div>
 
   <div class="field">
-    <%= form.label :identifier %>
-    <%= form.text_field :identifier %>
+    <%= form.label :length %>
+    <%= form.text_field :length %>
   </div>
 
   <div class="field">
-    <%= form.label :receipt %>
-    <%= form.number_field :receipt %>
+    <%= form.label :width %>
+    <%= form.text_field :width %>
+  </div>
+
+  <div class="field">
+    <%= form.label :height %>
+    <%= form.text_field :height %>
+  </div>
+
+  <div class="field">
+    <%= form.label :shipment %>
+    <%= form.text_field :shipment %>
   </div>
 
   <div class="field">
     <%= form.label :note %>
-    <%= form.text_area :note %>
+    <%= form.text_field :note %>
   </div>
 
   <div class="actions">
