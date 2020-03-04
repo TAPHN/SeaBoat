@@ -1727,3 +1727,347 @@ Processing by ShipmentsController#index as HTML
 Completed 200 OK in 9ms (Views: 7.8ms | ActiveRecord: 0.1ms | Allocations: 6751)
 
 
+Started GET "/shipments/new" for ::1 at 2020-03-03 22:36:04 -0600
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ShipmentsController#new as HTML
+  Rendering shipments/new.html.erb within layouts/application
+  Rendered shipments/_form.html.erb (Duration: 4.0ms | Allocations: 4248)
+  Rendered shipments/new.html.erb within layouts/application (Duration: 4.3ms | Allocations: 4355)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 20ms (Views: 8.7ms | ActiveRecord: 0.0ms | Allocations: 21981)
+
+
+Started POST "/shipments" for ::1 at 2020-03-03 22:36:12 -0600
+Processing by ShipmentsController#create as HTML
+  Parameters: {"authenticity_token"=>"VXaPlfv3U9OXltsIHHeUDQ9tjsc4vzsS7eopzt6MExRPzHmYec8R9TIaEW6yzB9a93mwdCRTt9L0iNKe9cEttw==", "shipment"=>{"code"=>"", "tracking"=>"", "date(1i)"=>"2020", "date(2i)"=>"3", "date(3i)"=>"4", "status"=>"", "carrier"=>"", "amount"=>"", "packages"=>"", "product"=>"", "weight"=>"3", "length"=>"4", "width"=>"5", "height"=>"2", "shipment"=>"", "note"=>""}, "commit"=>"Create Shipment"}
+  [1m[35m (1.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/shipments_controller.rb:30:in `block in create'
+  [1m[36mShipment Create (0.5ms)[0m  [1m[32mINSERT INTO "shipments" ("code", "tracking", "date", "status", "carrier", "product", "weight", "length", "width", "height", "shipment", "note", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["code", ""], ["tracking", ""], ["date", "2020-03-04"], ["status", ""], ["carrier", ""], ["product", ""], ["weight", 3.0], ["length", 4.0], ["width", 5.0], ["height", 2.0], ["shipment", ""], ["note", ""], ["created_at", "2020-03-04 04:36:12.525525"], ["updated_at", "2020-03-04 04:36:12.525525"]]
+  ↳ app/controllers/shipments_controller.rb:30:in `block in create'
+  [1m[35m (1.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/shipments_controller.rb:30:in `block in create'
+Redirected to http://localhost:3000/shipments/7
+Completed 302 Found in 11ms (ActiveRecord: 3.5ms | Allocations: 3869)
+
+
+Started GET "/shipments/7" for ::1 at 2020-03-03 22:36:12 -0600
+Processing by ShipmentsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mShipment Load (0.2ms)[0m  [1m[34mSELECT "shipments".* FROM "shipments" WHERE "shipments"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/shipments_controller.rb:67:in `set_shipment'
+  Rendering shipments/show.html.erb within layouts/application
+  Rendered shipments/show.html.erb within layouts/application (Duration: 0.4ms | Allocations: 158)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 584ms (Views: 581.7ms | ActiveRecord: 0.2ms | Allocations: 6033)
+
+
+Started GET "/shipments" for ::1 at 2020-03-03 22:36:14 -0600
+Processing by ShipmentsController#index as HTML
+  Rendering shipments/index.html.erb within layouts/application
+  [1m[36mShipment Load (0.2ms)[0m  [1m[34mSELECT "shipments".* FROM "shipments"[0m
+  ↳ app/views/shipments/index.html.erb:29
+  Rendered shipments/index.html.erb within layouts/application (Duration: 5.2ms | Allocations: 3043)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.2ms | Allocations: 3578)
+
+
+  
+ActionView::Template::Error (nil can't be coerced into BigDecimal):
+    41:         <td><%= shipment.length %></td>
+    42:         <td><%= shipment.width %></td>
+    43:         <td><%= shipment.height %></td>
+    44:         <td><%= shipment.volumetric_weight %></td>
+    45:         <td><%= shipment.shipment %></td>
+    46:         <td><%= shipment.note %></td>
+    47:         <td><%= link_to 'Show', shipment %></td>
+  
+app/models/shipment.rb:5:in `*'
+app/models/shipment.rb:5:in `volumetric_weight'
+app/views/shipments/index.html.erb:44
+app/views/shipments/index.html.erb:29
+Started GET "/shipments" for ::1 at 2020-03-03 22:36:35 -0600
+Processing by ShipmentsController#index as HTML
+  Rendering shipments/index.html.erb within layouts/application
+  [1m[36mShipment Load (0.2ms)[0m  [1m[34mSELECT "shipments".* FROM "shipments"[0m
+  ↳ app/views/shipments/index.html.erb:29
+  Rendered shipments/index.html.erb within layouts/application (Duration: 2.5ms | Allocations: 2379)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.2ms | Allocations: 2931)
+
+
+  
+ActionView::Template::Error (nil can't be coerced into BigDecimal):
+    41:         <td><%= shipment.length %></td>
+    42:         <td><%= shipment.width %></td>
+    43:         <td><%= shipment.height %></td>
+    44:         <td><%= shipment.volumetric_weight %></td>
+    45:         <td><%= shipment.shipment %></td>
+    46:         <td><%= shipment.note %></td>
+    47:         <td><%= link_to 'Show', shipment %></td>
+  
+app/models/shipment.rb:5:in `*'
+app/models/shipment.rb:5:in `volumetric_weight'
+app/views/shipments/index.html.erb:44
+app/views/shipments/index.html.erb:29
+Started GET "/shipments" for ::1 at 2020-03-03 22:37:00 -0600
+Processing by ShipmentsController#index as HTML
+  Rendering shipments/index.html.erb within layouts/application
+  [1m[36mShipment Load (0.2ms)[0m  [1m[34mSELECT "shipments".* FROM "shipments"[0m
+  ↳ app/views/shipments/index.html.erb:29
+  Rendered shipments/index.html.erb within layouts/application (Duration: 3.0ms | Allocations: 2357)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.2ms | Allocations: 2889)
+
+
+  
+ActionView::Template::Error (nil can't be coerced into BigDecimal):
+    41:         <td><%= shipment.length %></td>
+    42:         <td><%= shipment.width %></td>
+    43:         <td><%= shipment.height %></td>
+    44:         <td><%= shipment.volumetric_weight %></td>
+    45:         <td><%= shipment.shipment %></td>
+    46:         <td><%= shipment.note %></td>
+    47:         <td><%= link_to 'Show', shipment %></td>
+  
+app/models/shipment.rb:5:in `*'
+app/models/shipment.rb:5:in `volumetric_weight'
+app/views/shipments/index.html.erb:44
+app/views/shipments/index.html.erb:29
+Started GET "/shipments" for ::1 at 2020-03-03 22:37:01 -0600
+Processing by ShipmentsController#index as HTML
+  Rendering shipments/index.html.erb within layouts/application
+  [1m[36mShipment Load (0.1ms)[0m  [1m[34mSELECT "shipments".* FROM "shipments"[0m
+  ↳ app/views/shipments/index.html.erb:29
+  Rendered shipments/index.html.erb within layouts/application (Duration: 2.3ms | Allocations: 2355)
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.1ms | Allocations: 2886)
+
+
+  
+ActionView::Template::Error (nil can't be coerced into BigDecimal):
+    41:         <td><%= shipment.length %></td>
+    42:         <td><%= shipment.width %></td>
+    43:         <td><%= shipment.height %></td>
+    44:         <td><%= shipment.volumetric_weight %></td>
+    45:         <td><%= shipment.shipment %></td>
+    46:         <td><%= shipment.note %></td>
+    47:         <td><%= link_to 'Show', shipment %></td>
+  
+app/models/shipment.rb:5:in `*'
+app/models/shipment.rb:5:in `volumetric_weight'
+app/views/shipments/index.html.erb:44
+app/views/shipments/index.html.erb:29
+Started GET "/shipments" for ::1 at 2020-03-03 22:37:02 -0600
+Processing by ShipmentsController#index as HTML
+  Rendering shipments/index.html.erb within layouts/application
+  [1m[36mShipment Load (0.2ms)[0m  [1m[34mSELECT "shipments".* FROM "shipments"[0m
+  ↳ app/views/shipments/index.html.erb:29
+  Rendered shipments/index.html.erb within layouts/application (Duration: 2.8ms | Allocations: 2355)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.2ms | Allocations: 2886)
+
+
+  
+ActionView::Template::Error (nil can't be coerced into BigDecimal):
+    41:         <td><%= shipment.length %></td>
+    42:         <td><%= shipment.width %></td>
+    43:         <td><%= shipment.height %></td>
+    44:         <td><%= shipment.volumetric_weight %></td>
+    45:         <td><%= shipment.shipment %></td>
+    46:         <td><%= shipment.note %></td>
+    47:         <td><%= link_to 'Show', shipment %></td>
+  
+app/models/shipment.rb:5:in `*'
+app/models/shipment.rb:5:in `volumetric_weight'
+app/views/shipments/index.html.erb:44
+app/views/shipments/index.html.erb:29
+Started GET "/shipments" for ::1 at 2020-03-03 22:37:02 -0600
+Processing by ShipmentsController#index as HTML
+  Rendering shipments/index.html.erb within layouts/application
+  [1m[36mShipment Load (0.2ms)[0m  [1m[34mSELECT "shipments".* FROM "shipments"[0m
+  ↳ app/views/shipments/index.html.erb:29
+  Rendered shipments/index.html.erb within layouts/application (Duration: 3.5ms | Allocations: 2355)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.2ms | Allocations: 2886)
+
+
+  
+ActionView::Template::Error (nil can't be coerced into BigDecimal):
+    41:         <td><%= shipment.length %></td>
+    42:         <td><%= shipment.width %></td>
+    43:         <td><%= shipment.height %></td>
+    44:         <td><%= shipment.volumetric_weight %></td>
+    45:         <td><%= shipment.shipment %></td>
+    46:         <td><%= shipment.note %></td>
+    47:         <td><%= link_to 'Show', shipment %></td>
+  
+app/models/shipment.rb:5:in `*'
+app/models/shipment.rb:5:in `volumetric_weight'
+app/views/shipments/index.html.erb:44
+app/views/shipments/index.html.erb:29
+Started GET "/shipments" for ::1 at 2020-03-03 22:37:02 -0600
+Processing by ShipmentsController#index as HTML
+  Rendering shipments/index.html.erb within layouts/application
+  [1m[36mShipment Load (0.2ms)[0m  [1m[34mSELECT "shipments".* FROM "shipments"[0m
+  ↳ app/views/shipments/index.html.erb:29
+  Rendered shipments/index.html.erb within layouts/application (Duration: 3.7ms | Allocations: 2355)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.2ms | Allocations: 2886)
+
+
+  
+ActionView::Template::Error (nil can't be coerced into BigDecimal):
+    41:         <td><%= shipment.length %></td>
+    42:         <td><%= shipment.width %></td>
+    43:         <td><%= shipment.height %></td>
+    44:         <td><%= shipment.volumetric_weight %></td>
+    45:         <td><%= shipment.shipment %></td>
+    46:         <td><%= shipment.note %></td>
+    47:         <td><%= link_to 'Show', shipment %></td>
+  
+app/models/shipment.rb:5:in `*'
+app/models/shipment.rb:5:in `volumetric_weight'
+app/views/shipments/index.html.erb:44
+app/views/shipments/index.html.erb:29
+Started GET "/shipments" for ::1 at 2020-03-03 22:37:13 -0600
+Processing by ShipmentsController#index as HTML
+  Rendering shipments/index.html.erb within layouts/application
+  [1m[36mShipment Load (0.1ms)[0m  [1m[34mSELECT "shipments".* FROM "shipments"[0m
+  ↳ app/views/shipments/index.html.erb:29
+  Rendered shipments/index.html.erb within layouts/application (Duration: 2.7ms | Allocations: 2355)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.1ms | Allocations: 2886)
+
+
+  
+ActionView::Template::Error (nil can't be coerced into BigDecimal):
+    41:         <td><%= shipment.length %></td>
+    42:         <td><%= shipment.width %></td>
+    43:         <td><%= shipment.height %></td>
+    44:         <td><%= shipment.volumetric_weight %></td>
+    45:         <td><%= shipment.shipment %></td>
+    46:         <td><%= shipment.note %></td>
+    47:         <td><%= link_to 'Show', shipment %></td>
+  
+app/models/shipment.rb:5:in `*'
+app/models/shipment.rb:5:in `volumetric_weight'
+app/views/shipments/index.html.erb:44
+app/views/shipments/index.html.erb:29
+Started GET "/shipments" for ::1 at 2020-03-03 22:39:07 -0600
+Processing by ShipmentsController#index as HTML
+  Rendering shipments/index.html.erb within layouts/application
+  [1m[36mShipment Load (0.1ms)[0m  [1m[34mSELECT "shipments".* FROM "shipments"[0m
+  ↳ app/views/shipments/index.html.erb:29
+  Rendered shipments/index.html.erb within layouts/application (Duration: 4.7ms | Allocations: 2355)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.1ms | Allocations: 2887)
+
+
+  
+ActionView::Template::Error (nil can't be coerced into BigDecimal):
+    41:         <td><%= shipment.length %></td>
+    42:         <td><%= shipment.width %></td>
+    43:         <td><%= shipment.height %></td>
+    44:         <td><%= shipment.volumetric_weight %></td>
+    45:         <td><%= shipment.shipment %></td>
+    46:         <td><%= shipment.note %></td>
+    47:         <td><%= link_to 'Show', shipment %></td>
+  
+app/models/shipment.rb:5:in `*'
+app/models/shipment.rb:5:in `volumetric_weight'
+app/views/shipments/index.html.erb:44
+app/views/shipments/index.html.erb:29
+Started GET "/shipments/new" for ::1 at 2020-03-03 22:39:09 -0600
+Processing by ShipmentsController#new as HTML
+  Rendering shipments/new.html.erb within layouts/application
+  Rendered shipments/_form.html.erb (Duration: 3.7ms | Allocations: 4179)
+  Rendered shipments/new.html.erb within layouts/application (Duration: 3.9ms | Allocations: 4285)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 10ms (Views: 9.7ms | ActiveRecord: 0.0ms | Allocations: 9297)
+
+
+Started GET "/shipments/new" for ::1 at 2020-03-03 22:41:05 -0600
+Processing by ShipmentsController#new as HTML
+  Rendering shipments/new.html.erb within layouts/application
+  Rendered shipments/_form.html.erb (Duration: 3.9ms | Allocations: 4161)
+  Rendered shipments/new.html.erb within layouts/application (Duration: 4.1ms | Allocations: 4267)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 9ms (Views: 8.9ms | ActiveRecord: 0.0ms | Allocations: 9246)
+
+
+Started GET "/shipments/new" for ::1 at 2020-03-03 22:41:12 -0600
+Processing by ShipmentsController#new as HTML
+  Rendering shipments/new.html.erb within layouts/application
+  Rendered shipments/_form.html.erb (Duration: 5.4ms | Allocations: 4161)
+  Rendered shipments/new.html.erb within layouts/application (Duration: 5.6ms | Allocations: 4267)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 12ms (Views: 11.0ms | ActiveRecord: 0.0ms | Allocations: 9248)
+
+
+Started GET "/shipments" for ::1 at 2020-03-03 22:41:52 -0600
+Processing by ShipmentsController#index as HTML
+  Rendering shipments/index.html.erb within layouts/application
+  [1m[36mShipment Load (0.1ms)[0m  [1m[34mSELECT "shipments".* FROM "shipments"[0m
+  ↳ app/views/shipments/index.html.erb:29
+  Rendered shipments/index.html.erb within layouts/application (Duration: 2.3ms | Allocations: 2355)
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.1ms | Allocations: 2902)
+
+
+  
+ActionView::Template::Error (nil can't be coerced into BigDecimal):
+    41:         <td><%= shipment.length %></td>
+    42:         <td><%= shipment.width %></td>
+    43:         <td><%= shipment.height %></td>
+    44:         <td><%= shipment.volumetric_weight %></td>
+    45:         <td><%= shipment.shipment %></td>
+    46:         <td><%= shipment.note %></td>
+    47:         <td><%= link_to 'Show', shipment %></td>
+  
+app/models/shipment.rb:5:in `*'
+app/models/shipment.rb:5:in `volumetric_weight'
+app/views/shipments/index.html.erb:44
+app/views/shipments/index.html.erb:29
+Started GET "/shipments/new" for ::1 at 2020-03-03 22:58:22 -0600
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ShipmentsController#new as HTML
+  Rendering shipments/new.html.erb within layouts/application
+  Rendered shipments/_form.html.erb (Duration: 4.4ms | Allocations: 4252)
+  Rendered shipments/new.html.erb within layouts/application (Duration: 4.7ms | Allocations: 4359)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 230ms (Views: 218.6ms | ActiveRecord: 0.0ms | Allocations: 22061)
+
+
+Started GET "/shipments/new" for ::1 at 2020-03-03 22:58:25 -0600
+Processing by ShipmentsController#new as HTML
+  Rendering shipments/new.html.erb within layouts/application
+  Rendered shipments/_form.html.erb (Duration: 4.0ms | Allocations: 4161)
+  Rendered shipments/new.html.erb within layouts/application (Duration: 4.2ms | Allocations: 4267)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 11ms (Views: 9.9ms | ActiveRecord: 0.0ms | Allocations: 9257)
+
+
+Started POST "/shipments" for ::1 at 2020-03-03 22:58:40 -0600
+Processing by ShipmentsController#create as HTML
+  Parameters: {"authenticity_token"=>"oRVLo8WWAdM8aiFcyPg3CO5sc6iFVu+R5NeXX3vIUrK2zCEO3PhPxgjTmbwUPn9uIAb8ylsJ5xAnpUG/sO8G5g==", "shipment"=>{"code"=>"", "tracking"=>"", "date(1i)"=>"2020", "date(2i)"=>"3", "date(3i)"=>"4", "status"=>"", "carrier"=>"", "amount"=>"", "packages"=>"", "product"=>"", "weight"=>"8", "length"=>"8", "width"=>"8", "height"=>"8", "shipment"=>"", "note"=>""}, "commit"=>"Create Shipment"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/shipments_controller.rb:30:in `block in create'
+  [1m[36mShipment Create (0.7ms)[0m  [1m[32mINSERT INTO "shipments" ("code", "tracking", "date", "status", "carrier", "product", "weight", "length", "width", "height", "shipment", "note", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["code", ""], ["tracking", ""], ["date", "2020-03-04"], ["status", ""], ["carrier", ""], ["product", ""], ["weight", 8.0], ["length", 8.0], ["width", 8.0], ["height", 8.0], ["shipment", ""], ["note", ""], ["created_at", "2020-03-04 04:58:40.893489"], ["updated_at", "2020-03-04 04:58:40.893489"]]
+  ↳ app/controllers/shipments_controller.rb:30:in `block in create'
+  [1m[35m (3.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/shipments_controller.rb:30:in `block in create'
+Redirected to http://localhost:3000/shipments/8
+Completed 302 Found in 10ms (ActiveRecord: 4.1ms | Allocations: 4452)
+
+
+Started GET "/shipments/8" for ::1 at 2020-03-03 22:58:40 -0600
+Processing by ShipmentsController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mShipment Load (0.2ms)[0m  [1m[34mSELECT "shipments".* FROM "shipments" WHERE "shipments"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/shipments_controller.rb:67:in `set_shipment'
+  Rendering shipments/show.html.erb within layouts/application
+  Rendered shipments/show.html.erb within layouts/application (Duration: 0.5ms | Allocations: 158)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 7ms (Views: 5.2ms | ActiveRecord: 0.2ms | Allocations: 5841)
+
+
+Started GET "/shipments" for ::1 at 2020-03-03 22:58:47 -0600
+Processing by ShipmentsController#index as HTML
+  Rendering shipments/index.html.erb within layouts/application
+  [1m[36mShipment Load (0.3ms)[0m  [1m[34mSELECT "shipments".* FROM "shipments"[0m
+  ↳ app/views/shipments/index.html.erb:29
+  Rendered shipments/index.html.erb within layouts/application (Duration: 3.3ms | Allocations: 2250)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 10ms (Views: 8.7ms | ActiveRecord: 0.3ms | Allocations: 7222)
+
+
