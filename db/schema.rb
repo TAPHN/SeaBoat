@@ -10,11 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
-ActiveRecord::Schema.define(version: 2020_04_06_140224) do
-=======
-ActiveRecord::Schema.define(version: 2020_03_03_053537) do
->>>>>>> parent of 7b29941e... adding sender to shipments
+ActiveRecord::Schema.define(version: 2020_04_06_153717) do
 
   create_table "shipments", force: :cascade do |t|
     t.string "code"
@@ -34,11 +30,8 @@ ActiveRecord::Schema.define(version: 2020_03_03_053537) do
     t.string "note"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-<<<<<<< HEAD
-    t.string "sender"
     t.string "agent"
-=======
->>>>>>> parent of 7b29941e... adding sender to shipments
+    t.string "sender"
   end
 
 end
