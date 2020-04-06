@@ -1,0 +1,2073 @@
+Started GET "/" for ::1 at 2020-02-23 23:02:56 -0600
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /var/lib/gems/2.5.0/gems/railties-6.0.2.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /var/lib/gems/2.5.0/gems/railties-6.0.2.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 6.4ms | Allocations: 456)
+Completed 200 OK in 15ms (Views: 9.5ms | ActiveRecord: 0.0ms | Allocations: 2644)
+
+
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (8.0ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateShipments (20200224172012)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "shipments" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "code" varchar, "tracking" varchar, "date" date, "status" varchar, "carrier" varchar, "amount" integer, "shipments" integer, "product" varchar, "weight" decimal, "identifier" varchar, "receipt" integer, "note" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20200224172012"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-02-24 17:20:18.842514"], ["updated_at", "2020-02-24 17:20:18.842514"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for ::1 at 2020-02-24 11:22:28 -0600
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /var/lib/gems/2.5.0/gems/railties-6.0.2.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /var/lib/gems/2.5.0/gems/railties-6.0.2.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 5.3ms | Allocations: 456)
+Completed 200 OK in 13ms (Views: 7.3ms | ActiveRecord: 0.0ms | Allocations: 2645)
+
+
+Started GET "/" for ::1 at 2020-02-24 11:23:50 -0600
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (uninitialized constant ShipmentController
+Did you mean?  ShipmentsController):
+  
+activesupport (6.0.2.1) lib/active_support/inflector/methods.rb:282:in `const_get'
+activesupport (6.0.2.1) lib/active_support/inflector/methods.rb:282:in `block in constantize'
+activesupport (6.0.2.1) lib/active_support/inflector/methods.rb:280:in `each'
+activesupport (6.0.2.1) lib/active_support/inflector/methods.rb:280:in `inject'
+activesupport (6.0.2.1) lib/active_support/inflector/methods.rb:280:in `constantize'
+activesupport (6.0.2.1) lib/active_support/dependencies/zeitwerk_integration.rb:19:in `constantize'
+actionpack (6.0.2.1) lib/action_dispatch/http/request.rb:88:in `controller_class_for'
+actionpack (6.0.2.1) lib/action_dispatch/http/request.rb:81:in `controller_class'
+actionpack (6.0.2.1) lib/action_dispatch/routing/route_set.rb:45:in `controller'
+actionpack (6.0.2.1) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (6.0.2.1) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.2.1) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.2.1) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.2.1) lib/action_dispatch/routing/route_set.rb:837:in `call'
+rack (2.2.2) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.2) lib/rack/etag.rb:27:in `call'
+rack (2.2.2) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.2) lib/rack/head.rb:12:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.2) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.2) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/cookies.rb:648:in `call'
+activerecord (6.0.2.1) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.2.1) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+webpacker (4.2.2) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.2.1) lib/rails/engine.rb:526:in `call'
+puma (4.3.1) lib/puma/configuration.rb:228:in `call'
+puma (4.3.1) lib/puma/server.rb:681:in `handle_request'
+puma (4.3.1) lib/puma/server.rb:472:in `process_client'
+puma (4.3.1) lib/puma/server.rb:328:in `block in run'
+puma (4.3.1) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/shipments" for ::1 at 2020-02-24 11:24:06 -0600
+Processing by ShipmentsController#index as HTML
+  Rendering shipments/index.html.erb within layouts/application
+  [1m[36mShipment Load (0.2ms)[0m  [1m[34mSELECT "shipments".* FROM "shipments"[0m
+  ↳ app/views/shipments/index.html.erb:25
+  Rendered shipments/index.html.erb within layouts/application (Duration: 3.6ms | Allocations: 2158)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /home/jp/seaBoat/public/packs
+[Webpacker] Hash: 32e57f147dbdcbbf0c82
+Version: webpack 4.41.6
+Time: 1396ms
+Built at: 02/24/2020 11:24:09 AM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-bbe9c4a129ab949e0636.js    124 KiB  application  [emitted] [immutable]  application
+js/application-bbe9c4a129ab949e0636.js.map    139 KiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-bbe9c4a129ab949e0636.js js/application-bbe9c4a129ab949e0636.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 749 bytes {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 3 hidden modules
+
+Completed 200 OK in 3319ms (Views: 3316.4ms | ActiveRecord: 0.5ms | Allocations: 24460)
+
+
+Started GET "/shipments/new" for ::1 at 2020-02-24 11:24:15 -0600
+Processing by ShipmentsController#new as HTML
+  Rendering shipments/new.html.erb within layouts/application
+  Rendered shipments/_form.html.erb (Duration: 18.6ms | Allocations: 9035)
+  Rendered shipments/new.html.erb within layouts/application (Duration: 19.9ms | Allocations: 9403)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 35ms (Views: 24.6ms | ActiveRecord: 0.4ms | Allocations: 23893)
+
+
+Started GET "/shipments" for ::1 at 2020-02-24 11:24:36 -0600
+Processing by ShipmentsController#index as HTML
+  Rendering shipments/index.html.erb within layouts/application
+  [1m[36mShipment Load (0.1ms)[0m  [1m[34mSELECT "shipments".* FROM "shipments"[0m
+  ↳ app/views/shipments/index.html.erb:25
+  Rendered shipments/index.html.erb within layouts/application (Duration: 1.3ms | Allocations: 640)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 12ms (Views: 10.9ms | ActiveRecord: 0.1ms | Allocations: 4848)
+
+
+Started GET "/shipments/new" for ::1 at 2020-02-24 11:24:44 -0600
+Processing by ShipmentsController#new as HTML
+  Rendering shipments/new.html.erb within layouts/application
+  Rendered shipments/_form.html.erb (Duration: 7.7ms | Allocations: 3758)
+  Rendered shipments/new.html.erb within layouts/application (Duration: 8.0ms | Allocations: 3865)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 13ms (Views: 12.7ms | ActiveRecord: 0.0ms | Allocations: 8093)
+
+
+Started GET "/" for ::1 at 2020-02-24 11:25:13 -0600
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ShipmentsController#index as HTML
+  Rendering shipments/index.html.erb within layouts/application
+  [1m[36mShipment Load (0.2ms)[0m  [1m[34mSELECT "shipments".* FROM "shipments"[0m
+  ↳ app/views/shipments/index.html.erb:25
+  Rendered shipments/index.html.erb within layouts/application (Duration: 3.7ms | Allocations: 2396)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 27ms (Views: 19.9ms | ActiveRecord: 0.5ms | Allocations: 11852)
+
+
+Started GET "/shipments/new" for ::1 at 2020-02-24 11:25:15 -0600
+Processing by ShipmentsController#new as HTML
+  Rendering shipments/new.html.erb within layouts/application
+  Rendered shipments/_form.html.erb (Duration: 8.5ms | Allocations: 7227)
+  Rendered shipments/new.html.erb within layouts/application (Duration: 9.4ms | Allocations: 7603)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 24ms (Views: 13.4ms | ActiveRecord: 0.4ms | Allocations: 22103)
+
+
+Started GET "/shipments" for ::1 at 2020-02-24 11:25:26 -0600
+Processing by ShipmentsController#index as HTML
+  Rendering shipments/index.html.erb within layouts/application
+  [1m[36mShipment Load (0.1ms)[0m  [1m[34mSELECT "shipments".* FROM "shipments"[0m
+  ↳ app/views/shipments/index.html.erb:25
+  Rendered shipments/index.html.erb within layouts/application (Duration: 1.0ms | Allocations: 656)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 5ms (Views: 4.8ms | ActiveRecord: 0.1ms | Allocations: 4874)
+
+
+Started GET "/shipments/new" for ::1 at 2020-02-24 11:35:56 -0600
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ShipmentsController#new as HTML
+  Rendering shipments/new.html.erb within layouts/application
+  Rendered shipments/_form.html.erb (Duration: 5.0ms | Allocations: 3758)
+  Rendered shipments/new.html.erb within layouts/application (Duration: 5.4ms | Allocations: 3865)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 13ms (Views: 11.7ms | ActiveRecord: 0.0ms | Allocations: 8102)
+
+
+Started GET "/" for ::1 at 2020-02-24 14:58:36 -0600
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (6.0.2.1) lib/active_record/migration.rb:587:in `check_pending!'
+activerecord (6.0.2.1) lib/active_record/migration.rb:564:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.2.1) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+webpacker (4.2.2) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.2.1) lib/rails/engine.rb:526:in `call'
+puma (4.3.1) lib/puma/configuration.rb:228:in `call'
+puma (4.3.1) lib/puma/server.rb:681:in `handle_request'
+puma (4.3.1) lib/puma/server.rb:472:in `process_client'
+puma (4.3.1) lib/puma/server.rb:328:in `block in run'
+puma (4.3.1) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateShipments (20200224173716)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "shipments" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "code" varchar, "tracking" varchar, "date" date, "status" varchar, "carrier" varchar, "amount" integer, "shipment" integer, "product" varchar, "weight" decimal, "identifier" varchar, "receipt" integer, "note" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for ::1 at 2020-02-24 14:59:33 -0600
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+ActionController::RoutingError (uninitialized constant ShipmentsController):
+  
+activesupport (6.0.2.1) lib/active_support/inflector/methods.rb:282:in `const_get'
+activesupport (6.0.2.1) lib/active_support/inflector/methods.rb:282:in `block in constantize'
+activesupport (6.0.2.1) lib/active_support/inflector/methods.rb:280:in `each'
+activesupport (6.0.2.1) lib/active_support/inflector/methods.rb:280:in `inject'
+activesupport (6.0.2.1) lib/active_support/inflector/methods.rb:280:in `constantize'
+activesupport (6.0.2.1) lib/active_support/dependencies/zeitwerk_integration.rb:19:in `constantize'
+actionpack (6.0.2.1) lib/action_dispatch/http/request.rb:88:in `controller_class_for'
+actionpack (6.0.2.1) lib/action_dispatch/http/request.rb:81:in `controller_class'
+actionpack (6.0.2.1) lib/action_dispatch/routing/route_set.rb:45:in `controller'
+actionpack (6.0.2.1) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (6.0.2.1) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.2.1) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.2.1) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.2.1) lib/action_dispatch/routing/route_set.rb:837:in `call'
+rack (2.2.2) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.2) lib/rack/etag.rb:27:in `call'
+rack (2.2.2) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.2) lib/rack/head.rb:12:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.2) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.2) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/cookies.rb:648:in `call'
+activerecord (6.0.2.1) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.2.1) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+webpacker (4.2.2) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.2.1) lib/rails/engine.rb:526:in `call'
+puma (4.3.1) lib/puma/configuration.rb:228:in `call'
+puma (4.3.1) lib/puma/server.rb:681:in `handle_request'
+puma (4.3.1) lib/puma/server.rb:472:in `process_client'
+puma (4.3.1) lib/puma/server.rb:328:in `block in run'
+puma (4.3.1) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateShipments (20200224205947)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "shipments" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "code" varchar, "tracking" varchar, "date" date, "status" varchar, "carrier" varchar, "amount" integer, "shipment" integer, "product" varchar, "weight" decimal, "identifier" varchar, "receipt" integer, "note" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateShipments (20200224205947)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "shipments" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "code" varchar, "tracking" varchar, "date" date, "status" varchar, "carrier" varchar, "amount" integer, "shipment" integer, "product" varchar, "weight" decimal, "identifier" varchar, "receipt" integer, "note" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateShipments (20200224205947)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "shipments" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "code" varchar, "tracking" varchar, "date" date, "status" varchar, "carrier" varchar, "amount" integer, "shipment" integer, "product" varchar, "weight" decimal, "identifier" varchar, "receipt" integer, "note" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20200224205947"]]
+  [1m[35m (7.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for ::1 at 2020-02-24 15:02:59 -0600
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ShipmentsController#index as HTML
+  Rendering shipments/index.html.erb within layouts/application
+  [1m[36mShipment Load (0.1ms)[0m  [1m[34mSELECT "shipments".* FROM "shipments"[0m
+  ↳ app/views/shipments/index.html.erb:25
+  Rendered shipments/index.html.erb within layouts/application (Duration: 3.8ms | Allocations: 2397)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /home/jp/seaBoat/public/packs
+[Webpacker] Hash: 928b0a3fac9a06b7fc93
+Version: webpack 4.41.6
+Time: 2807ms
+Built at: 02/24/2020 3:03:04 PM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-8c37fe05a2244babcbf4.js    644 KiB  application  [emitted] [immutable]  application
+js/application-8c37fe05a2244babcbf4.js.map    756 KiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-8c37fe05a2244babcbf4.js js/application-8c37fe05a2244babcbf4.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 771 bytes {application} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 6 hidden modules
+
+Completed 200 OK in 4795ms (Views: 4788.3ms | ActiveRecord: 0.4ms | Allocations: 58132)
+
+
+Started GET "/shipments/new" for ::1 at 2020-02-24 15:03:08 -0600
+Processing by ShipmentsController#new as HTML
+  Rendering shipments/new.html.erb within layouts/application
+  Rendered shipments/_form.html.erb (Duration: 7.6ms | Allocations: 7227)
+  Rendered shipments/new.html.erb within layouts/application (Duration: 8.3ms | Allocations: 7605)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 24ms (Views: 12.9ms | ActiveRecord: 0.3ms | Allocations: 22789)
+
+
+Started GET "/shipments" for ::1 at 2020-02-24 15:03:21 -0600
+Processing by ShipmentsController#index as HTML
+  Rendering shipments/index.html.erb within layouts/application
+  [1m[36mShipment Load (0.1ms)[0m  [1m[34mSELECT "shipments".* FROM "shipments"[0m
+  ↳ app/views/shipments/index.html.erb:25
+  Rendered shipments/index.html.erb within layouts/application (Duration: 1.0ms | Allocations: 649)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 6ms (Views: 5.7ms | ActiveRecord: 0.1ms | Allocations: 5571)
+
+
+Started GET "/" for ::1 at 2020-02-24 15:03:38 -0600
+Processing by ShipmentsController#index as HTML
+  Rendering shipments/index.html.erb within layouts/application
+  [1m[36mShipment Load (0.1ms)[0m  [1m[34mSELECT "shipments".* FROM "shipments"[0m
+  ↳ app/views/shipments/index.html.erb:25
+  Rendered shipments/index.html.erb within layouts/application (Duration: 2.0ms | Allocations: 1163)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 9ms (Views: 8.0ms | ActiveRecord: 0.1ms | Allocations: 6997)
+
+
+Started GET "/index3.html" for ::1 at 2020-02-24 15:03:43 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/index3.html"):
+  
+actionpack (6.0.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+webpacker (4.2.2) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.2.1) lib/rails/engine.rb:526:in `call'
+puma (4.3.1) lib/puma/configuration.rb:228:in `call'
+puma (4.3.1) lib/puma/server.rb:681:in `handle_request'
+puma (4.3.1) lib/puma/server.rb:472:in `process_client'
+puma (4.3.1) lib/puma/server.rb:328:in `block in run'
+puma (4.3.1) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/" for ::1 at 2020-02-24 15:03:46 -0600
+Processing by ShipmentsController#index as HTML
+  Rendering shipments/index.html.erb within layouts/application
+  [1m[36mShipment Load (0.1ms)[0m  [1m[34mSELECT "shipments".* FROM "shipments"[0m
+  ↳ app/views/shipments/index.html.erb:25
+  Rendered shipments/index.html.erb within layouts/application (Duration: 1.0ms | Allocations: 665)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 8ms (Views: 7.3ms | ActiveRecord: 0.1ms | Allocations: 5612)
+
+
+Started GET "/" for ::1 at 2020-02-24 15:04:46 -0600
+Processing by ShipmentsController#index as HTML
+  Rendering shipments/index.html.erb within layouts/application
+  [1m[36mShipment Load (0.1ms)[0m  [1m[34mSELECT "shipments".* FROM "shipments"[0m
+  ↳ app/views/shipments/index.html.erb:25
+  Rendered shipments/index.html.erb within layouts/application (Duration: 0.9ms | Allocations: 640)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 193ms (Views: 192.6ms | ActiveRecord: 0.1ms | Allocations: 36660)
+
+
+Started GET "/index3.html" for ::1 at 2020-02-24 15:05:00 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/index3.html"):
+  
+actionpack (6.0.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+webpacker (4.2.2) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.2.1) lib/rails/engine.rb:526:in `call'
+puma (4.3.1) lib/puma/configuration.rb:228:in `call'
+puma (4.3.1) lib/puma/server.rb:681:in `handle_request'
+puma (4.3.1) lib/puma/server.rb:472:in `process_client'
+puma (4.3.1) lib/puma/server.rb:328:in `block in run'
+puma (4.3.1) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/" for ::1 at 2020-02-24 15:05:02 -0600
+Processing by ShipmentsController#index as HTML
+  Rendering shipments/index.html.erb within layouts/application
+  [1m[36mShipment Load (0.1ms)[0m  [1m[34mSELECT "shipments".* FROM "shipments"[0m
+  ↳ app/views/shipments/index.html.erb:25
+  Rendered shipments/index.html.erb within layouts/application (Duration: 1.5ms | Allocations: 637)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 380ms (Views: 379.4ms | ActiveRecord: 0.1ms | Allocations: 5602)
+
+
+Started GET "/" for ::1 at 2020-02-24 15:05:53 -0600
+Processing by ShipmentsController#index as HTML
+  Rendering shipments/index.html.erb within layouts/application
+  [1m[36mShipment Load (0.1ms)[0m  [1m[34mSELECT "shipments".* FROM "shipments"[0m
+  ↳ app/views/shipments/index.html.erb:25
+  Rendered shipments/index.html.erb within layouts/application (Duration: 1.7ms | Allocations: 1044)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 9ms (Views: 8.4ms | ActiveRecord: 0.1ms | Allocations: 6951)
+
+
+Started GET "/" for ::1 at 2020-02-24 15:06:07 -0600
+Processing by ShipmentsController#index as HTML
+  Rendering shipments/index.html.erb within layouts/application
+  [1m[36mShipment Load (0.1ms)[0m  [1m[34mSELECT "shipments".* FROM "shipments"[0m
+  ↳ app/views/shipments/index.html.erb:25
+  Rendered shipments/index.html.erb within layouts/application (Duration: 1.5ms | Allocations: 1036)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 8ms (Views: 7.2ms | ActiveRecord: 0.1ms | Allocations: 6926)
+
+
+Started GET "/shipments/new" for ::1 at 2020-02-24 15:06:08 -0600
+Processing by ShipmentsController#new as HTML
+  Rendering shipments/new.html.erb within layouts/application
+  Rendered shipments/_form.html.erb (Duration: 4.9ms | Allocations: 4443)
+  Rendered shipments/new.html.erb within layouts/application (Duration: 5.6ms | Allocations: 4806)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 17ms (Views: 16.2ms | ActiveRecord: 0.0ms | Allocations: 9931)
+
+
+Started GET "/shipments" for ::1 at 2020-02-24 15:12:34 -0600
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ShipmentsController#index as HTML
+  Rendering shipments/index.html.erb within layouts/application
+  [1m[36mShipment Load (0.2ms)[0m  [1m[34mSELECT "shipments".* FROM "shipments"[0m
+  ↳ app/views/shipments/index.html.erb:25
+  Rendered shipments/index.html.erb within layouts/application (Duration: 1.9ms | Allocations: 1077)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 10ms (Views: 8.7ms | ActiveRecord: 0.2ms | Allocations: 6970)
+
+
+Started GET "/shipments/new" for ::1 at 2020-02-24 15:12:35 -0600
+Processing by ShipmentsController#new as HTML
+  Rendering shipments/new.html.erb within layouts/application
+  Rendered shipments/_form.html.erb (Duration: 17.4ms | Allocations: 12303)
+  Rendered shipments/new.html.erb within layouts/application (Duration: 18.3ms | Allocations: 12666)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 24ms (Views: 23.1ms | ActiveRecord: 0.0ms | Allocations: 17699)
+
+
+Started GET "/shipments" for ::1 at 2020-02-24 15:12:49 -0600
+Processing by ShipmentsController#index as HTML
+  Rendering shipments/index.html.erb within layouts/application
+  [1m[36mShipment Load (0.1ms)[0m  [1m[34mSELECT "shipments".* FROM "shipments"[0m
+  ↳ app/views/shipments/index.html.erb:25
+  Rendered shipments/index.html.erb within layouts/application (Duration: 1.0ms | Allocations: 640)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 6ms (Views: 5.4ms | ActiveRecord: 0.1ms | Allocations: 5595)
+
+
+Started GET "/shipments/new" for ::1 at 2020-02-24 15:12:51 -0600
+Processing by ShipmentsController#new as HTML
+  Rendering shipments/new.html.erb within layouts/application
+  Rendered shipments/_form.html.erb (Duration: 4.9ms | Allocations: 3757)
+  Rendered shipments/new.html.erb within layouts/application (Duration: 5.6ms | Allocations: 3863)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 14ms (Views: 12.8ms | ActiveRecord: 0.0ms | Allocations: 8853)
+
+
+Started GET "/shipments" for ::1 at 2020-02-24 15:13:00 -0600
+Processing by ShipmentsController#index as HTML
+  Rendering shipments/index.html.erb within layouts/application
+  [1m[36mShipment Load (0.1ms)[0m  [1m[34mSELECT "shipments".* FROM "shipments"[0m
+  ↳ app/views/shipments/index.html.erb:25
+  Rendered shipments/index.html.erb within layouts/application (Duration: 1.0ms | Allocations: 638)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 8ms (Views: 7.1ms | ActiveRecord: 0.1ms | Allocations: 5606)
+
+
+Started GET "/shipments/new" for ::1 at 2020-02-24 15:28:07 -0600
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ShipmentsController#new as HTML
+  Rendering shipments/new.html.erb within layouts/application
+  Rendered shipments/_form.html.erb (Duration: 5.2ms | Allocations: 3757)
+  Rendered shipments/new.html.erb within layouts/application (Duration: 5.5ms | Allocations: 3863)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 13ms (Views: 12.3ms | ActiveRecord: 0.0ms | Allocations: 8854)
+
+
+Started GET "/shipments" for ::1 at 2020-02-24 15:28:09 -0600
+Processing by ShipmentsController#index as HTML
+  Rendering shipments/index.html.erb within layouts/application
+  [1m[36mShipment Load (0.2ms)[0m  [1m[34mSELECT "shipments".* FROM "shipments"[0m
+  ↳ app/views/shipments/index.html.erb:25
+  Rendered shipments/index.html.erb within layouts/application (Duration: 1.1ms | Allocations: 676)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 10ms (Views: 8.7ms | ActiveRecord: 0.2ms | Allocations: 5638)
+
+
+Started GET "/shipments/new" for ::1 at 2020-02-24 15:39:04 -0600
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ShipmentsController#new as HTML
+  Rendering shipments/new.html.erb within layouts/application
+  Rendered shipments/_form.html.erb (Duration: 3.8ms | Allocations: 3757)
+  Rendered shipments/new.html.erb within layouts/application (Duration: 4.0ms | Allocations: 3863)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 10ms (Views: 9.5ms | ActiveRecord: 0.0ms | Allocations: 8850)
+
+
+Started GET "/" for ::1 at 2020-02-27 23:16:39 -0600
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ShipmentsController#index as HTML
+  Rendering shipments/index.html.erb within layouts/application
+  [1m[36mShipment Load (0.1ms)[0m  [1m[34mSELECT "shipments".* FROM "shipments"[0m
+  ↳ app/views/shipments/index.html.erb:25
+  Rendered shipments/index.html.erb within layouts/application (Duration: 1.0ms | Allocations: 676)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 9ms (Views: 8.1ms | ActiveRecord: 0.1ms | Allocations: 5646)
+
+
+Started GET "/shipments" for ::1 at 2020-02-27 23:54:22 -0600
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ShipmentsController#index as HTML
+  Rendering shipments/index.html.erb within layouts/application
+  [1m[36mShipment Load (0.2ms)[0m  [1m[34mSELECT "shipments".* FROM "shipments"[0m
+  ↳ app/views/shipments/index.html.erb:25
+  Rendered shipments/index.html.erb within layouts/application (Duration: 1.0ms | Allocations: 676)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 7ms (Views: 5.9ms | ActiveRecord: 0.2ms | Allocations: 5636)
+
+
+Started GET "/shipments/new" for ::1 at 2020-02-27 23:54:24 -0600
+Processing by ShipmentsController#new as HTML
+  Rendering shipments/new.html.erb within layouts/application
+  Rendered shipments/_form.html.erb (Duration: 5.6ms | Allocations: 3757)
+  Rendered shipments/new.html.erb within layouts/application (Duration: 5.9ms | Allocations: 3863)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 11ms (Views: 10.8ms | ActiveRecord: 0.0ms | Allocations: 8837)
+
+
+Started GET "/" for ::1 at 2020-03-02 22:49:05 -0600
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (6.0.2.1) lib/active_record/migration.rb:587:in `check_pending!'
+activerecord (6.0.2.1) lib/active_record/migration.rb:564:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.2.1) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+webpacker (4.2.2) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.2.1) lib/rails/engine.rb:526:in `call'
+puma (4.3.1) lib/puma/configuration.rb:228:in `call'
+puma (4.3.1) lib/puma/server.rb:681:in `handle_request'
+puma (4.3.1) lib/puma/server.rb:472:in `process_client'
+puma (4.3.1) lib/puma/server.rb:328:in `block in run'
+puma (4.3.1) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateShipments (20200303041809)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "shipments" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "code" varchar, "tracking" varchar, "date" date, "status" varchar, "carrier" varchar, "amount" integer, "packages" integer, "product" varchar, "weight" decimal, "shipment" varchar, "note" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "shipments"[0m
+  [1m[35m (2.0ms)[0m  [1m[35mCREATE TABLE "shipments" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "code" varchar, "tracking" varchar, "date" date, "status" varchar, "carrier" varchar, "amount" integer, "shipment" integer, "product" varchar, "weight" decimal, "identifier" varchar, "receipt" integer, "note" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.9ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20200224205947)[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-03-03 04:49:52.129628"], ["updated_at", "2020-03-03 04:49:52.129628"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "schema_sha1"], ["value", "d2a109a93eacc0c724cbbd7060b320f9c090e7c9"], ["created_at", "2020-03-03 04:49:52.140229"], ["updated_at", "2020-03-03 04:49:52.140229"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "shipments"[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE TABLE "shipments" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "code" varchar, "tracking" varchar, "date" date, "status" varchar, "carrier" varchar, "amount" integer, "shipment" integer, "product" varchar, "weight" decimal, "identifier" varchar, "receipt" integer, "note" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20200224205947)[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.1ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-03-03 04:49:52.161247"], ["updated_at", "2020-03-03 04:49:52.161247"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Update (0.2ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = ?, "updated_at" = ? WHERE "ar_internal_metadata"."key" = ?[0m  [["value", "test"], ["updated_at", "2020-03-03 04:49:52.167173"], ["key", "environment"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "schema_sha1"], ["value", "d2a109a93eacc0c724cbbd7060b320f9c090e7c9"], ["created_at", "2020-03-03 04:49:52.177547"], ["updated_at", "2020-03-03 04:49:52.177547"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateShipments (20200303041809)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "shipments" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "code" varchar, "tracking" varchar, "date" date, "status" varchar, "carrier" varchar, "amount" integer, "packages" integer, "product" varchar, "weight" decimal, "shipment" varchar, "note" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateShipments (20200303041809)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "shipments" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "code" varchar, "tracking" varchar, "date" date, "status" varchar, "carrier" varchar, "amount" integer, "packages" integer, "product" varchar, "weight" decimal, "shipment" varchar, "note" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (3.8ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateShipments (20200303041809)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "shipments" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "code" varchar, "tracking" varchar, "date" date, "status" varchar, "carrier" varchar, "amount" integer, "packages" integer, "product" varchar, "weight" decimal, "shipment" varchar, "note" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20200303041809"]]
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-03-03 04:52:30.068328"], ["updated_at", "2020-03-03 04:52:30.068328"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for ::1 at 2020-03-02 22:52:39 -0600
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ShipmentsController#index as HTML
+  Rendering shipments/index.html.erb within layouts/application
+  [1m[36mShipment Load (0.1ms)[0m  [1m[34mSELECT "shipments".* FROM "shipments"[0m
+  ↳ app/views/shipments/index.html.erb:24
+  Rendered shipments/index.html.erb within layouts/application (Duration: 4.3ms | Allocations: 2332)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 55ms (Views: 47.4ms | ActiveRecord: 0.5ms | Allocations: 19111)
+
+
+Started GET "/shipments/new" for ::1 at 2020-03-02 22:52:43 -0600
+Processing by ShipmentsController#new as HTML
+  Rendering shipments/new.html.erb within layouts/application
+  Rendered shipments/_form.html.erb (Duration: 8.0ms | Allocations: 6953)
+  Rendered shipments/new.html.erb within layouts/application (Duration: 8.9ms | Allocations: 7329)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 24ms (Views: 13.7ms | ActiveRecord: 0.4ms | Allocations: 21910)
+
+
+Started GET "/shipments/new" for ::1 at 2020-03-02 22:53:20 -0600
+Processing by ShipmentsController#new as HTML
+  Rendering shipments/new.html.erb within layouts/application
+  Rendered shipments/_form.html.erb (Duration: 10.7ms | Allocations: 12175)
+  Rendered shipments/new.html.erb within layouts/application (Duration: 11.4ms | Allocations: 12539)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 18ms (Views: 17.6ms | ActiveRecord: 0.0ms | Allocations: 18366)
+
+
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (3.0ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateShipments (20200303051117)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "shipments" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "code" varchar, "tracking" varchar, "date" date, "status" varchar, "carrier" varchar, "amount" integer, "packages" integer, "product" varchar, "weight" decimal, "lenght" decimal, "width" decimal, "height" decimal, "volumetric_weight" varchar, "shipment" varchar, "note" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20200303051117"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-03-03 05:11:32.969089"], ["updated_at", "2020-03-03 05:11:32.969089"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for ::1 at 2020-03-02 23:13:34 -0600
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ShipmentsController#index as HTML
+  Rendering shipments/index.html.erb within layouts/application
+  [1m[36mShipment Load (0.2ms)[0m  [1m[34mSELECT "shipments".* FROM "shipments"[0m
+  ↳ app/views/shipments/index.html.erb:28
+  Rendered shipments/index.html.erb within layouts/application (Duration: 3.2ms | Allocations: 2590)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 29ms (Views: 21.7ms | ActiveRecord: 0.4ms | Allocations: 14832)
+
+
+Started GET "/shipments/new" for ::1 at 2020-03-02 23:13:36 -0600
+Processing by ShipmentsController#new as HTML
+  Rendering shipments/new.html.erb within layouts/application
+  Rendered shipments/_form.html.erb (Duration: 9.0ms | Allocations: 8044)
+  Rendered shipments/new.html.erb within layouts/application (Duration: 9.9ms | Allocations: 8420)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 28ms (Views: 15.4ms | ActiveRecord: 0.4ms | Allocations: 25676)
+
+
+Started GET "/shipments/new" for ::1 at 2020-03-02 23:14:08 -0600
+Processing by ShipmentsController#new as HTML
+  Rendering shipments/new.html.erb within layouts/application
+  Rendered shipments/_form.html.erb (Duration: 11.1ms | Allocations: 13132)
+  Rendered shipments/new.html.erb within layouts/application (Duration: 11.8ms | Allocations: 13496)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 18ms (Views: 17.6ms | ActiveRecord: 0.0ms | Allocations: 19330)
+
+
+Started GET "/shipments/new" for ::1 at 2020-03-02 23:33:10 -0600
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ShipmentsController#new as HTML
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms | Allocations: 787)
+
+
+  
+SyntaxError (/home/jp/seaBoat/app/models/shipment.rb:2: syntax error, unexpected ':', expecting keyword_end
+    attr_reader: volumetric_weight
+               ^):
+  
+app/models/shipment.rb:2: syntax error, unexpected ':', expecting keyword_end
+app/models/shipment.rb:2: syntax error, unexpected ':', expecting keyword_end
+app/models/shipment.rb:2: syntax error, unexpected ':', expecting keyword_end
+app/controllers/shipments_controller.rb:17:in `new'
+Started GET "/shipments/new" for ::1 at 2020-03-02 23:33:57 -0600
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ShipmentsController#new as HTML
+  Rendering shipments/new.html.erb within layouts/application
+  Rendered shipments/_form.html.erb (Duration: 14.0ms | Allocations: 9452)
+  Rendered shipments/new.html.erb within layouts/application (Duration: 15.1ms | Allocations: 10066)
+Completed 500 Internal Server Error in 39ms (ActiveRecord: 0.7ms | Allocations: 26532)
+
+
+  
+ActionView::Template::Error (undefined method `*' for nil:NilClass):
+    73: 
+    74:   <div class="field">
+    75:     <%= form.label :volumetric_weight %>
+    76:     <%= form.text_field :volumetric_weight %>
+    77:   </div>
+    78: 
+    79:   <div class="field">
+  
+app/models/shipment.rb:5:in `volumetric_weight'
+app/views/shipments/_form.html.erb:76
+app/views/shipments/_form.html.erb:1
+app/views/shipments/new.html.erb:3
+Started GET "/" for ::1 at 2020-03-02 23:34:08 -0600
+Processing by ShipmentsController#index as HTML
+  Rendering shipments/index.html.erb within layouts/application
+  [1m[36mShipment Load (0.3ms)[0m  [1m[34mSELECT "shipments".* FROM "shipments"[0m
+  ↳ app/views/shipments/index.html.erb:28
+  Rendered shipments/index.html.erb within layouts/application (Duration: 3.0ms | Allocations: 1169)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 22ms (Views: 19.9ms | ActiveRecord: 0.3ms | Allocations: 10426)
+
+
+Started GET "/shipments/new" for ::1 at 2020-03-02 23:34:09 -0600
+Processing by ShipmentsController#new as HTML
+  Rendering shipments/new.html.erb within layouts/application
+  Rendered shipments/_form.html.erb (Duration: 6.1ms | Allocations: 5090)
+  Rendered shipments/new.html.erb within layouts/application (Duration: 6.3ms | Allocations: 5178)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms | Allocations: 5751)
+
+
+  
+ActionView::Template::Error (undefined method `*' for nil:NilClass):
+    73: 
+    74:   <div class="field">
+    75:     <%= form.label :volumetric_weight %>
+    76:     <%= form.text_field :volumetric_weight %>
+    77:   </div>
+    78: 
+    79:   <div class="field">
+  
+app/models/shipment.rb:5:in `volumetric_weight'
+app/views/shipments/_form.html.erb:76
+app/views/shipments/_form.html.erb:1
+app/views/shipments/new.html.erb:3
+Started GET "/" for ::1 at 2020-03-02 23:34:44 -0600
+Processing by ShipmentsController#index as HTML
+  Rendering shipments/index.html.erb within layouts/application
+  [1m[36mShipment Load (0.1ms)[0m  [1m[34mSELECT "shipments".* FROM "shipments"[0m
+  ↳ app/views/shipments/index.html.erb:28
+  Rendered shipments/index.html.erb within layouts/application (Duration: 0.9ms | Allocations: 650)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 7ms (Views: 5.8ms | ActiveRecord: 0.1ms | Allocations: 5623)
+
+
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (7.6ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateShipments (20200303053537)
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "shipments" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "code" varchar, "tracking" varchar, "date" date, "status" varchar, "carrier" varchar, "amount" integer, "packages" integer, "product" varchar, "weight" decimal, "length" decimal, "width" decimal, "height" decimal, "volumetric_weight" varchar, "shipment" varchar, "note" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20200303053537"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-03-03 05:35:51.316858"], ["updated_at", "2020-03-03 05:35:51.316858"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/shipments/new" for ::1 at 2020-03-03 00:02:44 -0600
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ShipmentsController#new as HTML
+  Rendering shipments/new.html.erb within layouts/application
+  Rendered shipments/_form.html.erb (Duration: 14.1ms | Allocations: 8069)
+  Rendered shipments/new.html.erb within layouts/application (Duration: 15.7ms | Allocations: 8708)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 67ms (Views: 41.5ms | ActiveRecord: 0.7ms | Allocations: 34203)
+
+
+Started POST "/shipments" for ::1 at 2020-03-03 00:02:58 -0600
+Processing by ShipmentsController#create as HTML
+  Parameters: {"authenticity_token"=>"QmWPsRjXTVQ//rV+6W9nGpo9WxDFZHWtEpYzCEIvQ41VvOUcAbkDQQtHDZ41qS98VFfUchs7fSzR5OXoiQgX2Q==", "shipment"=>{"code"=>"", "tracking"=>"", "date(1i)"=>"2020", "date(2i)"=>"3", "date(3i)"=>"3", "status"=>"", "carrier"=>"", "amount"=>"", "packages"=>"", "product"=>"", "weight"=>"2", "length"=>"3", "width"=>"2", "height"=>"", "volumetric_weight"=>"", "shipment"=>"", "note"=>""}, "commit"=>"Create Shipment"}
+Completed 500 Internal Server Error in 139ms (ActiveRecord: 0.0ms | Allocations: 100000)
+
+
+  
+NameError (undefined local variable or method `weight' for #<ShipmentsController:0x00007f8c34068818>):
+  
+app/controllers/shipments_controller.rb:28:in `create'
+Started GET "/shipments/new" for ::1 at 2020-03-03 00:03:31 -0600
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ShipmentsController#new as HTML
+  Rendering shipments/new.html.erb within layouts/application
+  Rendered shipments/_form.html.erb (Duration: 11.6ms | Allocations: 8069)
+  Rendered shipments/new.html.erb within layouts/application (Duration: 14.0ms | Allocations: 8708)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 56ms (Views: 33.9ms | ActiveRecord: 0.6ms | Allocations: 33666)
+
+
+Started POST "/shipments" for ::1 at 2020-03-03 00:03:40 -0600
+Processing by ShipmentsController#create as HTML
+  Parameters: {"authenticity_token"=>"/XQFIt9SC8tDLOqm//NMZbEFRnxXPWU9+HLBXZX7+PHqrW+PxjxF3neVUkYjNQQDf2/JHolibbw7ABe9XtyspQ==", "shipment"=>{"code"=>"", "tracking"=>"", "date(1i)"=>"2020", "date(2i)"=>"3", "date(3i)"=>"3", "status"=>"", "carrier"=>"", "amount"=>"", "packages"=>"", "product"=>"", "weight"=>"2", "length"=>"3", "width"=>"2", "height"=>"", "volumetric_weight"=>"", "shipment"=>"", "note"=>""}, "commit"=>"Create Shipment"}
+Completed 500 Internal Server Error in 138ms (ActiveRecord: 0.0ms | Allocations: 99999)
+
+
+  
+NameError (undefined local variable or method `width' for #<ShipmentsController:0x00007f6644069cb0>):
+  
+app/controllers/shipments_controller.rb:28:in `create'
+Started GET "/shipments/new" for ::1 at 2020-03-03 00:04:28 -0600
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ShipmentsController#new as HTML
+  Rendering shipments/new.html.erb within layouts/application
+  Rendered shipments/_form.html.erb (Duration: 9.7ms | Allocations: 8069)
+  Rendered shipments/new.html.erb within layouts/application (Duration: 10.6ms | Allocations: 8708)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 45ms (Views: 27.1ms | ActiveRecord: 0.8ms | Allocations: 33664)
+
+
+Started POST "/shipments" for ::1 at 2020-03-03 00:04:41 -0600
+Processing by ShipmentsController#create as HTML
+  Parameters: {"authenticity_token"=>"SdxK9vfNjHD59WVITYMWE7KHx0jfe21B7Qg6jx/yeQVTZrz7dfXOVlx5ry7jOJ1ESpP5+8OX4YH0asHfNL9Hpg==", "shipment"=>{"code"=>"", "tracking"=>"", "date(1i)"=>"2020", "date(2i)"=>"3", "date(3i)"=>"3", "status"=>"", "carrier"=>"", "amount"=>"", "packages"=>"", "product"=>"", "weight"=>"2", "length"=>"3", "width"=>"2", "height"=>"2", "volumetric_weight"=>"", "shipment"=>"", "note"=>""}, "commit"=>"Create Shipment"}
+Completed 500 Internal Server Error in 131ms (ActiveRecord: 0.0ms | Allocations: 100031)
+
+
+  
+NameError (undefined local variable or method `width' for #<ShipmentsController:0x00007ff5e006fc38>):
+  
+app/controllers/shipments_controller.rb:28:in `create'
+Started GET "/shipments/new" for ::1 at 2020-03-03 00:05:20 -0600
+Processing by ShipmentsController#new as HTML
+  Rendering shipments/new.html.erb within layouts/application
+  Rendered shipments/_form.html.erb (Duration: 5.9ms | Allocations: 4403)
+  Rendered shipments/new.html.erb within layouts/application (Duration: 6.2ms | Allocations: 4512)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 12ms (Views: 10.7ms | ActiveRecord: 0.0ms | Allocations: 9559)
+
+
+Started POST "/shipments" for ::1 at 2020-03-03 00:05:45 -0600
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ShipmentsController#create as HTML
+  Parameters: {"authenticity_token"=>"QgB/TjYzJ8mRXYeEvdcM86xypKaX3KZGmprF0e96uLFV2RXjL11p3KXkP2RhEUSVYhgrxEmDrsdZ6BMxJF3s5Q==", "shipment"=>{"code"=>"", "tracking"=>"", "date(1i)"=>"2020", "date(2i)"=>"3", "date(3i)"=>"3", "status"=>"", "carrier"=>"", "amount"=>"", "packages"=>"", "product"=>"", "weight"=>"2", "length"=>"2", "width"=>"2", "height"=>"2", "volumetric_weight"=>"", "shipment"=>"", "note"=>""}, "commit"=>"Create Shipment"}
+Completed 500 Internal Server Error in 148ms (ActiveRecord: 0.7ms | Allocations: 113199)
+
+
+  
+NameError (undefined local variable or method `height' for #<ShipmentsController:0x00007ff5f55989e8>):
+  
+app/controllers/shipments_controller.rb:28:in `create'
+Started POST "/shipments" for ::1 at 2020-03-03 00:05:59 -0600
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ShipmentsController#create as HTML
+  Parameters: {"authenticity_token"=>"QgB/TjYzJ8mRXYeEvdcM86xypKaX3KZGmprF0e96uLFV2RXjL11p3KXkP2RhEUSVYhgrxEmDrsdZ6BMxJF3s5Q==", "shipment"=>{"code"=>"", "tracking"=>"", "date(1i)"=>"2020", "date(2i)"=>"3", "date(3i)"=>"3", "status"=>"", "carrier"=>"", "amount"=>"", "packages"=>"", "product"=>"", "weight"=>"2", "length"=>"2", "width"=>"2", "height"=>"2", "volumetric_weight"=>"", "shipment"=>"", "note"=>""}, "commit"=>"Create Shipment"}
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.7ms | Allocations: 14640)
+
+
+  
+NoMethodError (undefined method `*' for nil:NilClass):
+  
+app/controllers/shipments_controller.rb:28:in `create'
+Started POST "/shipments" for ::1 at 2020-03-03 00:06:41 -0600
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ShipmentsController#create as HTML
+  Parameters: {"authenticity_token"=>"QgB/TjYzJ8mRXYeEvdcM86xypKaX3KZGmprF0e96uLFV2RXjL11p3KXkP2RhEUSVYhgrxEmDrsdZ6BMxJF3s5Q==", "shipment"=>{"code"=>"", "tracking"=>"", "date(1i)"=>"2020", "date(2i)"=>"3", "date(3i)"=>"3", "status"=>"", "carrier"=>"", "amount"=>"", "packages"=>"", "product"=>"", "weight"=>"2", "length"=>"2", "width"=>"2", "height"=>"2", "volumetric_weight"=>"", "shipment"=>"", "note"=>""}, "commit"=>"Create Shipment"}
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.9ms | Allocations: 14605)
+
+
+  
+NoMethodError (undefined method `*' for nil:NilClass):
+  
+app/controllers/shipments_controller.rb:28:in `create'
+Started POST "/shipments" for ::1 at 2020-03-03 00:14:46 -0600
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ShipmentsController#create as HTML
+  Parameters: {"authenticity_token"=>"QgB/TjYzJ8mRXYeEvdcM86xypKaX3KZGmprF0e96uLFV2RXjL11p3KXkP2RhEUSVYhgrxEmDrsdZ6BMxJF3s5Q==", "shipment"=>{"code"=>"", "tracking"=>"", "date(1i)"=>"2020", "date(2i)"=>"3", "date(3i)"=>"3", "status"=>"", "carrier"=>"", "amount"=>"", "packages"=>"", "product"=>"", "weight"=>"2", "length"=>"2", "width"=>"2", "height"=>"2", "volumetric_weight"=>"", "shipment"=>"", "note"=>""}, "commit"=>"Create Shipment"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/shipments_controller.rb:31:in `block in create'
+  [1m[36mShipment Create (0.3ms)[0m  [1m[32mINSERT INTO "shipments" ("code", "tracking", "date", "status", "carrier", "product", "weight", "length", "width", "height", "shipment", "note", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["code", ""], ["tracking", ""], ["date", "2020-03-03"], ["status", ""], ["carrier", ""], ["product", ""], ["weight", 2.0], ["length", 2.0], ["width", 2.0], ["height", 2.0], ["shipment", ""], ["note", ""], ["created_at", "2020-03-03 06:14:46.233176"], ["updated_at", "2020-03-03 06:14:46.233176"]]
+  ↳ app/controllers/shipments_controller.rb:31:in `block in create'
+  [1m[35m (4.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/shipments_controller.rb:31:in `block in create'
+Redirected to http://localhost:3000/shipments/1
+Completed 302 Found in 28ms (ActiveRecord: 4.8ms | Allocations: 17178)
+
+
+Started GET "/shipments/1" for ::1 at 2020-03-03 00:14:46 -0600
+Processing by ShipmentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mShipment Load (0.4ms)[0m  [1m[34mSELECT "shipments".* FROM "shipments" WHERE "shipments"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/shipments_controller.rb:68:in `set_shipment'
+  Rendering shipments/show.html.erb within layouts/application
+  Rendered shipments/show.html.erb within layouts/application (Duration: 1.7ms | Allocations: 610)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 18ms (Views: 13.0ms | ActiveRecord: 0.4ms | Allocations: 7216)
+
+
+Started GET "/shipments" for ::1 at 2020-03-03 00:14:49 -0600
+Processing by ShipmentsController#index as HTML
+  Rendering shipments/index.html.erb within layouts/application
+  [1m[36mShipment Load (0.2ms)[0m  [1m[34mSELECT "shipments".* FROM "shipments"[0m
+  ↳ app/views/shipments/index.html.erb:28
+  Rendered shipments/index.html.erb within layouts/application (Duration: 2.1ms | Allocations: 1329)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 9ms (Views: 7.6ms | ActiveRecord: 0.2ms | Allocations: 6440)
+
+
+Started GET "/shipments/new" for ::1 at 2020-03-03 00:14:56 -0600
+Processing by ShipmentsController#new as HTML
+  Rendering shipments/new.html.erb within layouts/application
+  Rendered shipments/_form.html.erb (Duration: 10.4ms | Allocations: 4393)
+  Rendered shipments/new.html.erb within layouts/application (Duration: 10.7ms | Allocations: 4499)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 17ms (Views: 16.7ms | ActiveRecord: 0.0ms | Allocations: 9478)
+
+
+Started POST "/shipments" for ::1 at 2020-03-03 00:15:01 -0600
+Processing by ShipmentsController#create as HTML
+  Parameters: {"authenticity_token"=>"+zGfwPN46vrb6k8kbSmOIm087foZlQ2qiM3ATrIEg+jhi2nNcUCo3H5mhULDkgV1lSjTSQV5gWqRrzsemUm9Sw==", "shipment"=>{"code"=>"", "tracking"=>"", "date(1i)"=>"2020", "date(2i)"=>"3", "date(3i)"=>"3", "status"=>"", "carrier"=>"", "amount"=>"", "packages"=>"", "product"=>"", "weight"=>"", "length"=>"2", "width"=>"", "height"=>"", "volumetric_weight"=>"", "shipment"=>"", "note"=>""}, "commit"=>"Create Shipment"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/shipments_controller.rb:31:in `block in create'
+  [1m[36mShipment Create (0.6ms)[0m  [1m[32mINSERT INTO "shipments" ("code", "tracking", "date", "status", "carrier", "product", "length", "shipment", "note", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["code", ""], ["tracking", ""], ["date", "2020-03-03"], ["status", ""], ["carrier", ""], ["product", ""], ["length", 2.0], ["shipment", ""], ["note", ""], ["created_at", "2020-03-03 06:15:01.456260"], ["updated_at", "2020-03-03 06:15:01.456260"]]
+  ↳ app/controllers/shipments_controller.rb:31:in `block in create'
+  [1m[35m (7.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/shipments_controller.rb:31:in `block in create'
+Redirected to http://localhost:3000/shipments/2
+Completed 302 Found in 14ms (ActiveRecord: 8.6ms | Allocations: 4339)
+
+
+Started GET "/shipments/2" for ::1 at 2020-03-03 00:15:01 -0600
+Processing by ShipmentsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mShipment Load (0.1ms)[0m  [1m[34mSELECT "shipments".* FROM "shipments" WHERE "shipments"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/shipments_controller.rb:68:in `set_shipment'
+  Rendering shipments/show.html.erb within layouts/application
+  Rendered shipments/show.html.erb within layouts/application (Duration: 0.3ms | Allocations: 122)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 6ms (Views: 4.4ms | ActiveRecord: 0.1ms | Allocations: 5648)
+
+
+Started GET "/shipments" for ::1 at 2020-03-03 00:15:44 -0600
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ShipmentsController#index as HTML
+  Rendering shipments/index.html.erb within layouts/application
+  [1m[36mShipment Load (0.2ms)[0m  [1m[34mSELECT "shipments".* FROM "shipments"[0m
+  ↳ app/views/shipments/index.html.erb:28
+  Rendered shipments/index.html.erb within layouts/application (Duration: 17.0ms | Allocations: 15160)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 45ms (Views: 38.0ms | ActiveRecord: 0.8ms | Allocations: 26857)
+
+
+Started GET "/shipments/new" for ::1 at 2020-03-03 00:15:46 -0600
+Processing by ShipmentsController#new as HTML
+  Rendering shipments/new.html.erb within layouts/application
+  Rendered shipments/_form.html.erb (Duration: 11.6ms | Allocations: 7964)
+  Rendered shipments/new.html.erb within layouts/application (Duration: 12.6ms | Allocations: 8337)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 19ms (Views: 17.5ms | ActiveRecord: 0.0ms | Allocations: 13470)
+
+
+Started POST "/shipments" for ::1 at 2020-03-03 00:15:51 -0600
+Processing by ShipmentsController#create as HTML
+  Parameters: {"authenticity_token"=>"ec/WG20Vaz97qvPG/RgFZuK9eF156icV5fyxNEt4SAZjdSAW7y0pGd4mOaBTo44xGqlG7mUGq9X8nkpkYDV2pQ==", "shipment"=>{"code"=>"", "tracking"=>"", "date(1i)"=>"2020", "date(2i)"=>"3", "date(3i)"=>"3", "status"=>"", "carrier"=>"", "amount"=>"", "packages"=>"", "product"=>"", "weight"=>"", "length"=>"2", "width"=>"", "height"=>"", "volumetric_weight"=>"", "shipment"=>"", "note"=>""}, "commit"=>"Create Shipment"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/shipments_controller.rb:31:in `block in create'
+  [1m[36mShipment Create (0.8ms)[0m  [1m[32mINSERT INTO "shipments" ("code", "tracking", "date", "status", "carrier", "product", "length", "volumetric_weight", "shipment", "note", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["code", ""], ["tracking", ""], ["date", "2020-03-03"], ["status", ""], ["carrier", ""], ["product", ""], ["length", 2.0], ["volumetric_weight", "0"], ["shipment", ""], ["note", ""], ["created_at", "2020-03-03 06:15:51.744767"], ["updated_at", "2020-03-03 06:15:51.744767"]]
+  ↳ app/controllers/shipments_controller.rb:31:in `block in create'
+  [1m[35m (3.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/shipments_controller.rb:31:in `block in create'
+Redirected to http://localhost:3000/shipments/3
+Completed 302 Found in 15ms (ActiveRecord: 4.8ms | Allocations: 4689)
+
+
+Started GET "/shipments/3" for ::1 at 2020-03-03 00:15:51 -0600
+Processing by ShipmentsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mShipment Load (0.2ms)[0m  [1m[34mSELECT "shipments".* FROM "shipments" WHERE "shipments"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/shipments_controller.rb:68:in `set_shipment'
+  Rendering shipments/show.html.erb within layouts/application
+  Rendered shipments/show.html.erb within layouts/application (Duration: 3.2ms | Allocations: 579)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 14ms (Views: 11.2ms | ActiveRecord: 0.2ms | Allocations: 6988)
+
+
+Started GET "/shipments" for ::1 at 2020-03-03 00:16:02 -0600
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ShipmentsController#index as HTML
+  Rendering shipments/index.html.erb within layouts/application
+  [1m[36mShipment Load (0.1ms)[0m  [1m[34mSELECT "shipments".* FROM "shipments"[0m
+  ↳ app/views/shipments/index.html.erb:28
+  Rendered shipments/index.html.erb within layouts/application (Duration: 13.0ms | Allocations: 13960)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 19ms (Views: 16.9ms | ActiveRecord: 0.6ms | Allocations: 19555)
+
+
+Started GET "/shipments/new" for ::1 at 2020-03-03 00:16:04 -0600
+Processing by ShipmentsController#new as HTML
+  Rendering shipments/new.html.erb within layouts/application
+  Rendered shipments/_form.html.erb (Duration: 4.2ms | Allocations: 4393)
+  Rendered shipments/new.html.erb within layouts/application (Duration: 4.6ms | Allocations: 4500)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 10ms (Views: 9.3ms | ActiveRecord: 0.0ms | Allocations: 9489)
+
+
+Started POST "/shipments" for ::1 at 2020-03-03 00:16:07 -0600
+Processing by ShipmentsController#create as HTML
+  Parameters: {"authenticity_token"=>"AJSy5c1QxhJodrzcPXD0dlk8CpTtcABlsWoPg2iB4FQaLkToT2iENM36drqTy38hoSg0J/GcjKWoCPTTQ8ze9w==", "shipment"=>{"code"=>"", "tracking"=>"", "date(1i)"=>"2020", "date(2i)"=>"3", "date(3i)"=>"3", "status"=>"", "carrier"=>"", "amount"=>"", "packages"=>"", "product"=>"", "weight"=>"", "length"=>"3", "width"=>"", "height"=>"", "volumetric_weight"=>"", "shipment"=>"", "note"=>""}, "commit"=>"Create Shipment"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/shipments_controller.rb:31:in `block in create'
+  [1m[36mShipment Create (0.7ms)[0m  [1m[32mINSERT INTO "shipments" ("code", "tracking", "date", "status", "carrier", "product", "length", "shipment", "note", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["code", ""], ["tracking", ""], ["date", "2020-03-03"], ["status", ""], ["carrier", ""], ["product", ""], ["length", 3.0], ["shipment", ""], ["note", ""], ["created_at", "2020-03-03 06:16:07.355253"], ["updated_at", "2020-03-03 06:16:07.355253"]]
+  ↳ app/controllers/shipments_controller.rb:31:in `block in create'
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/shipments_controller.rb:31:in `block in create'
+Redirected to http://localhost:3000/shipments/4
+Completed 302 Found in 7ms (ActiveRecord: 1.8ms | Allocations: 4347)
+
+
+Started GET "/shipments/4" for ::1 at 2020-03-03 00:16:07 -0600
+Processing by ShipmentsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mShipment Load (0.2ms)[0m  [1m[34mSELECT "shipments".* FROM "shipments" WHERE "shipments"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/shipments_controller.rb:68:in `set_shipment'
+  Rendering shipments/show.html.erb within layouts/application
+  Rendered shipments/show.html.erb within layouts/application (Duration: 0.3ms | Allocations: 122)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 9ms (Views: 7.1ms | ActiveRecord: 0.2ms | Allocations: 5788)
+
+
+Started GET "/shipments" for ::1 at 2020-03-03 00:16:09 -0600
+Processing by ShipmentsController#index as HTML
+  Rendering shipments/index.html.erb within layouts/application
+  [1m[36mShipment Load (0.1ms)[0m  [1m[34mSELECT "shipments".* FROM "shipments"[0m
+  ↳ app/views/shipments/index.html.erb:28
+  Rendered shipments/index.html.erb within layouts/application (Duration: 1.7ms | Allocations: 1357)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 516ms (Views: 515.6ms | ActiveRecord: 0.1ms | Allocations: 6320)
+
+
+Started GET "/shipments/new" for ::1 at 2020-03-03 00:16:20 -0600
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ShipmentsController#new as HTML
+  Rendering shipments/new.html.erb within layouts/application
+  Rendered shipments/_form.html.erb (Duration: 4.6ms | Allocations: 4465)
+  Rendered shipments/new.html.erb within layouts/application (Duration: 4.9ms | Allocations: 4572)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 23ms (Views: 10.4ms | ActiveRecord: 0.9ms | Allocations: 22768)
+
+
+Started POST "/shipments" for ::1 at 2020-03-03 00:16:23 -0600
+Processing by ShipmentsController#create as HTML
+  Parameters: {"authenticity_token"=>"h2T5dDQght0Jd7poeqfp6JYPZnoelS+Lwb+q9avhJw+d3g95thjE+6z7cA7UHGK/bhtYyQJ5o0vY3VGlgKwZrA==", "shipment"=>{"code"=>"", "tracking"=>"", "date(1i)"=>"2020", "date(2i)"=>"3", "date(3i)"=>"3", "status"=>"", "carrier"=>"", "amount"=>"", "packages"=>"", "product"=>"", "weight"=>"", "length"=>"2", "width"=>"", "height"=>"", "volumetric_weight"=>"", "shipment"=>"", "note"=>""}, "commit"=>"Create Shipment"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 1644)
+
+
+  
+NoMethodError (undefined method `to_decimal' for nil:NilClass
+Did you mean?  to_yaml):
+  
+app/controllers/shipments_controller.rb:28:in `create'
+Started GET "/shipments" for ::1 at 2020-03-03 00:16:53 -0600
+Processing by ShipmentsController#index as HTML
+  Rendering shipments/index.html.erb within layouts/application
+  [1m[36mShipment Load (0.2ms)[0m  [1m[34mSELECT "shipments".* FROM "shipments"[0m
+  ↳ app/views/shipments/index.html.erb:28
+  Rendered shipments/index.html.erb within layouts/application (Duration: 2.1ms | Allocations: 1447)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 12ms (Views: 11.2ms | ActiveRecord: 0.2ms | Allocations: 6500)
+
+
+Started GET "/shipments/new" for ::1 at 2020-03-03 00:22:45 -0600
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ShipmentsController#new as HTML
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms | Allocations: 788)
+
+
+  
+SyntaxError (/home/jp/seaBoat/app/models/shipment.rb:5: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/models/shipment.rb:5: syntax error, unexpected end-of-input, expecting keyword_end
+app/models/shipment.rb:5: syntax error, unexpected end-of-input, expecting keyword_end
+app/models/shipment.rb:5: syntax error, unexpected end-of-input, expecting keyword_end
+app/controllers/shipments_controller.rb:17:in `new'
+Started GET "/shipments/new" for ::1 at 2020-03-03 00:23:00 -0600
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ShipmentsController#new as HTML
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms | Allocations: 1080)
+
+
+  
+ArgumentError (You need to supply at least one validation):
+  
+app/models/shipment.rb:2:in `<class:Shipment>'
+app/models/shipment.rb:1:in `<top (required)>'
+app/controllers/shipments_controller.rb:17:in `new'
+Started GET "/shipments/new" for ::1 at 2020-03-03 00:23:21 -0600
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ShipmentsController#new as HTML
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms | Allocations: 695)
+
+
+  
+SyntaxError (/home/jp/seaBoat/app/models/shipment.rb:2: syntax error, unexpected tIDENTIFIER, expecting keyword_end
+...idates :length, :width presence: true
+...                       ^~~~~~~~):
+  
+app/models/shipment.rb:2: syntax error, unexpected tIDENTIFIER, expecting keyword_end
+app/models/shipment.rb:2: syntax error, unexpected tIDENTIFIER, expecting keyword_end
+app/models/shipment.rb:2: syntax error, unexpected tIDENTIFIER, expecting keyword_end
+app/controllers/shipments_controller.rb:17:in `new'
+Started GET "/shipments/new" for ::1 at 2020-03-03 00:24:15 -0600
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ShipmentsController#new as HTML
+  Rendering shipments/new.html.erb within layouts/application
+  Rendered shipments/_form.html.erb (Duration: 17.1ms | Allocations: 11246)
+  Rendered shipments/new.html.erb within layouts/application (Duration: 18.1ms | Allocations: 11597)
+Completed 500 Internal Server Error in 37ms (ActiveRecord: 0.6ms | Allocations: 26877)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `lenght' for #<Shipment:0x00005569f70c6578>
+Did you mean?  length
+               length?
+               length=):
+    73: 
+    74:   <div class="field">
+    75:     <%= form.label :volumetric_weight %>
+    76:     <%= form.text_field :volumetric_weight %>
+    77:   </div>
+    78: 
+    79:   <div class="field">
+  
+app/models/shipment.rb:4:in `volumetric_weight'
+app/views/shipments/_form.html.erb:76
+app/views/shipments/_form.html.erb:1
+app/views/shipments/new.html.erb:3
+Started GET "/shipments/new" for ::1 at 2020-03-03 00:24:28 -0600
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ShipmentsController#new as HTML
+  Rendering shipments/new.html.erb within layouts/application
+  Rendered shipments/_form.html.erb (Duration: 15.2ms | Allocations: 5161)
+  Rendered shipments/new.html.erb within layouts/application (Duration: 15.4ms | Allocations: 5248)
+Completed 500 Internal Server Error in 32ms (ActiveRecord: 1.4ms | Allocations: 19141)
+
+
+  
+ActionView::Template::Error (undefined method `*' for nil:NilClass):
+    73: 
+    74:   <div class="field">
+    75:     <%= form.label :volumetric_weight %>
+    76:     <%= form.text_field :volumetric_weight %>
+    77:   </div>
+    78: 
+    79:   <div class="field">
+  
+app/models/shipment.rb:4:in `volumetric_weight'
+app/views/shipments/_form.html.erb:76
+app/views/shipments/_form.html.erb:1
+app/views/shipments/new.html.erb:3
+Started GET "/" for ::1 at 2020-03-03 00:24:55 -0600
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ShipmentsController#index as HTML
+  Rendering shipments/index.html.erb within layouts/application
+  [1m[36mShipment Load (0.2ms)[0m  [1m[34mSELECT "shipments".* FROM "shipments"[0m
+  ↳ app/views/shipments/index.html.erb:28
+  Rendered shipments/index.html.erb within layouts/application (Duration: 17.3ms | Allocations: 16575)
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 1.1ms | Allocations: 19842)
+
+
+  
+ActionView::Template::Error (nil can't be coerced into BigDecimal):
+    39:         <td><%= shipment.length %></td>
+    40:         <td><%= shipment.width %></td>
+    41:         <td><%= shipment.height %></td>
+    42:         <td><%= shipment.volumetric_weight %></td>
+    43:         <td><%= shipment.shipment %></td>
+    44:         <td><%= shipment.note %></td>
+    45:         <td><%= link_to 'Show', shipment %></td>
+  
+app/models/shipment.rb:4:in `*'
+app/models/shipment.rb:4:in `volumetric_weight'
+app/views/shipments/index.html.erb:42
+app/views/shipments/index.html.erb:28
+Started GET "/" for ::1 at 2020-03-03 00:24:58 -0600
+Processing by ShipmentsController#index as HTML
+  Rendering shipments/index.html.erb within layouts/application
+  [1m[36mShipment Load (0.1ms)[0m  [1m[34mSELECT "shipments".* FROM "shipments"[0m
+  ↳ app/views/shipments/index.html.erb:28
+  Rendered shipments/index.html.erb within layouts/application (Duration: 1.9ms | Allocations: 1807)
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.1ms | Allocations: 2372)
+
+
+  
+ActionView::Template::Error (nil can't be coerced into BigDecimal):
+    39:         <td><%= shipment.length %></td>
+    40:         <td><%= shipment.width %></td>
+    41:         <td><%= shipment.height %></td>
+    42:         <td><%= shipment.volumetric_weight %></td>
+    43:         <td><%= shipment.shipment %></td>
+    44:         <td><%= shipment.note %></td>
+    45:         <td><%= link_to 'Show', shipment %></td>
+  
+app/models/shipment.rb:4:in `*'
+app/models/shipment.rb:4:in `volumetric_weight'
+app/views/shipments/index.html.erb:42
+app/views/shipments/index.html.erb:28
+Started GET "/" for ::1 at 2020-03-03 00:25:03 -0600
+Processing by ShipmentsController#index as HTML
+  Rendering shipments/index.html.erb within layouts/application
+  [1m[36mShipment Load (0.1ms)[0m  [1m[34mSELECT "shipments".* FROM "shipments"[0m
+  ↳ app/views/shipments/index.html.erb:28
+  Rendered shipments/index.html.erb within layouts/application (Duration: 1.6ms | Allocations: 1784)
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.1ms | Allocations: 2327)
+
+
+  
+ActionView::Template::Error (nil can't be coerced into BigDecimal):
+    39:         <td><%= shipment.length %></td>
+    40:         <td><%= shipment.width %></td>
+    41:         <td><%= shipment.height %></td>
+    42:         <td><%= shipment.volumetric_weight %></td>
+    43:         <td><%= shipment.shipment %></td>
+    44:         <td><%= shipment.note %></td>
+    45:         <td><%= link_to 'Show', shipment %></td>
+  
+app/models/shipment.rb:4:in `*'
+app/models/shipment.rb:4:in `volumetric_weight'
+app/views/shipments/index.html.erb:42
+app/views/shipments/index.html.erb:28
+Started GET "/" for ::1 at 2020-03-03 00:25:04 -0600
+Processing by ShipmentsController#index as HTML
+  Rendering shipments/index.html.erb within layouts/application
+  [1m[36mShipment Load (0.1ms)[0m  [1m[34mSELECT "shipments".* FROM "shipments"[0m
+  ↳ app/views/shipments/index.html.erb:28
+  Rendered shipments/index.html.erb within layouts/application (Duration: 2.0ms | Allocations: 1784)
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.1ms | Allocations: 2327)
+
+
+  
+ActionView::Template::Error (nil can't be coerced into BigDecimal):
+    39:         <td><%= shipment.length %></td>
+    40:         <td><%= shipment.width %></td>
+    41:         <td><%= shipment.height %></td>
+    42:         <td><%= shipment.volumetric_weight %></td>
+    43:         <td><%= shipment.shipment %></td>
+    44:         <td><%= shipment.note %></td>
+    45:         <td><%= link_to 'Show', shipment %></td>
+  
+app/models/shipment.rb:4:in `*'
+app/models/shipment.rb:4:in `volumetric_weight'
+app/views/shipments/index.html.erb:42
+app/views/shipments/index.html.erb:28
+Started GET "/" for ::1 at 2020-03-03 00:27:11 -0600
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ShipmentsController#index as HTML
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms | Allocations: 701)
+
+
+  
+SyntaxError (/home/jp/seaBoat/app/models/shipment.rb:9: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/models/shipment.rb:9: syntax error, unexpected end-of-input, expecting keyword_end
+app/models/shipment.rb:9: syntax error, unexpected end-of-input, expecting keyword_end
+app/models/shipment.rb:9: syntax error, unexpected end-of-input, expecting keyword_end
+app/controllers/shipments_controller.rb:7:in `index'
+Started GET "/" for ::1 at 2020-03-03 00:27:26 -0600
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ShipmentsController#index as HTML
+  Rendering shipments/index.html.erb within layouts/application
+  [1m[36mShipment Load (0.2ms)[0m  [1m[34mSELECT "shipments".* FROM "shipments"[0m
+  ↳ app/views/shipments/index.html.erb:28
+  Rendered shipments/index.html.erb within layouts/application (Duration: 16.0ms | Allocations: 14212)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 43ms (Views: 39.8ms | ActiveRecord: 1.1ms | Allocations: 24009)
+
+
+Started GET "/shipments/new" for ::1 at 2020-03-03 00:27:28 -0600
+Processing by ShipmentsController#new as HTML
+  Rendering shipments/new.html.erb within layouts/application
+  Rendered shipments/_form.html.erb (Duration: 9.7ms | Allocations: 7979)
+  Rendered shipments/new.html.erb within layouts/application (Duration: 10.4ms | Allocations: 8346)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 16ms (Views: 15.4ms | ActiveRecord: 0.0ms | Allocations: 13477)
+
+
+Started POST "/shipments" for ::1 at 2020-03-03 00:27:40 -0600
+Processing by ShipmentsController#create as HTML
+  Parameters: {"authenticity_token"=>"MCm496PXTaFW8yGhsUJjjf/j0OR2yapOdQoBmO3nbawqk076Ie8Ph/N/68cf+ejaB/fuV2olJo5saPrIxqpTDw==", "shipment"=>{"code"=>"", "tracking"=>"", "date(1i)"=>"2020", "date(2i)"=>"3", "date(3i)"=>"3", "status"=>"", "carrier"=>"", "amount"=>"", "packages"=>"", "product"=>"", "weight"=>"2", "length"=>"2", "width"=>"", "height"=>"", "volumetric_weight"=>"0.0", "shipment"=>"", "note"=>""}, "commit"=>"Create Shipment"}
+  Rendering shipments/new.html.erb within layouts/application
+  Rendered shipments/_form.html.erb (Duration: 7.4ms | Allocations: 4631)
+  Rendered shipments/new.html.erb within layouts/application (Duration: 7.8ms | Allocations: 4737)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 15ms (Views: 12.3ms | ActiveRecord: 0.0ms | Allocations: 11218)
+
+
+Started POST "/shipments" for ::1 at 2020-03-03 00:27:49 -0600
+Processing by ShipmentsController#create as HTML
+  Parameters: {"authenticity_token"=>"Esu0ltxS035VlBIHifN8385Bu2LDRyrFl4YlLyBVrkIFEt47xTyda2EtqudVNTS5ACs0AB0YIkRU9PPP63L6Fg==", "shipment"=>{"code"=>"", "tracking"=>"", "date(1i)"=>"2020", "date(2i)"=>"3", "date(3i)"=>"3", "status"=>"", "carrier"=>"", "amount"=>"", "packages"=>"", "product"=>"", "weight"=>"2", "length"=>"2", "width"=>"2", "height"=>"", "volumetric_weight"=>"0.0", "shipment"=>"", "note"=>""}, "commit"=>"Create Shipment"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/shipments_controller.rb:30:in `block in create'
+  [1m[36mShipment Create (1.0ms)[0m  [1m[32mINSERT INTO "shipments" ("code", "tracking", "date", "status", "carrier", "product", "weight", "length", "width", "volumetric_weight", "shipment", "note", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["code", ""], ["tracking", ""], ["date", "2020-03-03"], ["status", ""], ["carrier", ""], ["product", ""], ["weight", 2.0], ["length", 2.0], ["width", 2.0], ["volumetric_weight", "0.0"], ["shipment", ""], ["note", ""], ["created_at", "2020-03-03 06:27:49.630930"], ["updated_at", "2020-03-03 06:27:49.630930"]]
+  ↳ app/controllers/shipments_controller.rb:30:in `block in create'
+  [1m[35m (7.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/shipments_controller.rb:30:in `block in create'
+Redirected to http://localhost:3000/shipments/5
+Completed 302 Found in 14ms (ActiveRecord: 8.9ms | Allocations: 4552)
+
+
+Started GET "/shipments/5" for ::1 at 2020-03-03 00:27:49 -0600
+Processing by ShipmentsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mShipment Load (0.3ms)[0m  [1m[34mSELECT "shipments".* FROM "shipments" WHERE "shipments"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/shipments_controller.rb:67:in `set_shipment'
+  Rendering shipments/show.html.erb within layouts/application
+  Rendered shipments/show.html.erb within layouts/application (Duration: 0.9ms | Allocations: 593)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 17ms (Views: 5.1ms | ActiveRecord: 0.3ms | Allocations: 12966)
+
+
+Started GET "/shipments" for ::1 at 2020-03-03 00:27:57 -0600
+Processing by ShipmentsController#index as HTML
+  Rendering shipments/index.html.erb within layouts/application
+  [1m[36mShipment Load (0.1ms)[0m  [1m[34mSELECT "shipments".* FROM "shipments"[0m
+  ↳ app/views/shipments/index.html.erb:28
+  Rendered shipments/index.html.erb within layouts/application (Duration: 2.0ms | Allocations: 1572)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 8ms (Views: 6.7ms | ActiveRecord: 0.1ms | Allocations: 6526)
+
+
+Started GET "/shipments/new" for ::1 at 2020-03-03 00:28:00 -0600
+Processing by ShipmentsController#new as HTML
+  Rendering shipments/new.html.erb within layouts/application
+  Rendered shipments/_form.html.erb (Duration: 6.4ms | Allocations: 4390)
+  Rendered shipments/new.html.erb within layouts/application (Duration: 6.7ms | Allocations: 4496)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 13ms (Views: 12.0ms | ActiveRecord: 0.0ms | Allocations: 9477)
+
+
+Started POST "/shipments" for ::1 at 2020-03-03 00:28:15 -0600
+Processing by ShipmentsController#create as HTML
+  Parameters: {"authenticity_token"=>"0XLTzFvotSVHCAP5adREdpOweFdmykJtjkRhSjk+CjPLyCXB2dD3A+KEyZ/Hb88ha6RG5Homzq2XJpoaEnM0kA==", "shipment"=>{"code"=>"", "tracking"=>"", "date(1i)"=>"2020", "date(2i)"=>"3", "date(3i)"=>"3", "status"=>"", "carrier"=>"", "amount"=>"", "packages"=>"", "product"=>"", "weight"=>"2", "length"=>"2", "width"=>"2", "height"=>"2", "volumetric_weight"=>"0.0", "shipment"=>"", "note"=>""}, "commit"=>"Create Shipment"}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/shipments_controller.rb:30:in `block in create'
+  [1m[36mShipment Create (0.5ms)[0m  [1m[32mINSERT INTO "shipments" ("code", "tracking", "date", "status", "carrier", "product", "weight", "length", "width", "height", "volumetric_weight", "shipment", "note", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["code", ""], ["tracking", ""], ["date", "2020-03-03"], ["status", ""], ["carrier", ""], ["product", ""], ["weight", 2.0], ["length", 2.0], ["width", 2.0], ["height", 2.0], ["volumetric_weight", "0.0"], ["shipment", ""], ["note", ""], ["created_at", "2020-03-03 06:28:15.779615"], ["updated_at", "2020-03-03 06:28:15.779615"]]
+  ↳ app/controllers/shipments_controller.rb:30:in `block in create'
+  [1m[35m (9.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/shipments_controller.rb:30:in `block in create'
+Redirected to http://localhost:3000/shipments/6
+Completed 302 Found in 14ms (ActiveRecord: 9.7ms | Allocations: 4401)
+
+
+Started GET "/shipments/6" for ::1 at 2020-03-03 00:28:15 -0600
+Processing by ShipmentsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mShipment Load (0.1ms)[0m  [1m[34mSELECT "shipments".* FROM "shipments" WHERE "shipments"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/shipments_controller.rb:67:in `set_shipment'
+  Rendering shipments/show.html.erb within layouts/application
+  Rendered shipments/show.html.erb within layouts/application (Duration: 0.8ms | Allocations: 144)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 128ms (Views: 126.5ms | ActiveRecord: 0.1ms | Allocations: 5851)
+
+
+Started GET "/shipments" for ::1 at 2020-03-03 00:28:22 -0600
+Processing by ShipmentsController#index as HTML
+  Rendering shipments/index.html.erb within layouts/application
+  [1m[36mShipment Load (0.1ms)[0m  [1m[34mSELECT "shipments".* FROM "shipments"[0m
+  ↳ app/views/shipments/index.html.erb:28
+  Rendered shipments/index.html.erb within layouts/application (Duration: 2.3ms | Allocations: 1765)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 7ms (Views: 6.8ms | ActiveRecord: 0.1ms | Allocations: 6725)
+
+
+Started GET "/shipments" for ::1 at 2020-03-03 00:30:03 -0600
+Processing by ShipmentsController#index as HTML
+  Rendering shipments/index.html.erb within layouts/application
+  [1m[36mShipment Load (0.2ms)[0m  [1m[34mSELECT "shipments".* FROM "shipments"[0m
+  ↳ app/views/shipments/index.html.erb:29
+  Rendered shipments/index.html.erb within layouts/application (Duration: 3.4ms | Allocations: 2234)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 15ms (Views: 13.9ms | ActiveRecord: 0.2ms | Allocations: 8134)
+
+
+Started GET "/shipments/new" for ::1 at 2020-03-03 00:30:24 -0600
+Processing by ShipmentsController#new as HTML
+  Rendering shipments/new.html.erb within layouts/application
+  Rendered shipments/_form.html.erb (Duration: 7.8ms | Allocations: 4895)
+  Rendered shipments/new.html.erb within layouts/application (Duration: 8.5ms | Allocations: 5261)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 14ms (Views: 13.3ms | ActiveRecord: 0.0ms | Allocations: 10384)
+
+
+Started GET "/shipments" for ::1 at 2020-03-03 00:30:27 -0600
+Processing by ShipmentsController#index as HTML
+  Rendering shipments/index.html.erb within layouts/application
+  [1m[36mShipment Load (0.1ms)[0m  [1m[34mSELECT "shipments".* FROM "shipments"[0m
+  ↳ app/views/shipments/index.html.erb:29
+  Rendered shipments/index.html.erb within layouts/application (Duration: 2.5ms | Allocations: 1782)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 14ms (Views: 13.5ms | ActiveRecord: 0.1ms | Allocations: 6748)
+
+
+Started GET "/shipments/1" for ::1 at 2020-03-03 00:30:29 -0600
+Processing by ShipmentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mShipment Load (0.1ms)[0m  [1m[34mSELECT "shipments".* FROM "shipments" WHERE "shipments"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/shipments_controller.rb:67:in `set_shipment'
+  Rendering shipments/show.html.erb within layouts/application
+  Rendered shipments/show.html.erb within layouts/application (Duration: 0.9ms | Allocations: 575)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 8ms (Views: 6.5ms | ActiveRecord: 0.1ms | Allocations: 6223)
+
+
+Started GET "/shipments" for ::1 at 2020-03-03 00:31:02 -0600
+Processing by ShipmentsController#index as HTML
+  Rendering shipments/index.html.erb within layouts/application
+  [1m[36mShipment Load (0.2ms)[0m  [1m[34mSELECT "shipments".* FROM "shipments"[0m
+  ↳ app/views/shipments/index.html.erb:29
+  Rendered shipments/index.html.erb within layouts/application (Duration: 3.3ms | Allocations: 2233)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 12ms (Views: 10.5ms | ActiveRecord: 0.2ms | Allocations: 8125)
+
+
+Started GET "/shipments/1" for ::1 at 2020-03-03 00:31:04 -0600
+Processing by ShipmentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mShipment Load (0.2ms)[0m  [1m[34mSELECT "shipments".* FROM "shipments" WHERE "shipments"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/shipments_controller.rb:67:in `set_shipment'
+  Rendering shipments/show.html.erb within layouts/application
+  Rendered shipments/show.html.erb within layouts/application (Duration: 0.8ms | Allocations: 598)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 11ms (Views: 8.9ms | ActiveRecord: 0.2ms | Allocations: 6244)
+
+
+Started GET "/shipments" for ::1 at 2020-03-03 00:31:08 -0600
+Processing by ShipmentsController#index as HTML
+  Rendering shipments/index.html.erb within layouts/application
+  [1m[36mShipment Load (0.1ms)[0m  [1m[34mSELECT "shipments".* FROM "shipments"[0m
+  ↳ app/views/shipments/index.html.erb:29
+  Rendered shipments/index.html.erb within layouts/application (Duration: 2.3ms | Allocations: 1780)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 9ms (Views: 8.6ms | ActiveRecord: 0.1ms | Allocations: 6745)
+
+
+Started GET "/shipments/1/edit" for ::1 at 2020-03-03 00:31:27 -0600
+Processing by ShipmentsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mShipment Load (0.1ms)[0m  [1m[34mSELECT "shipments".* FROM "shipments" WHERE "shipments"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/shipments_controller.rb:67:in `set_shipment'
+  Rendering shipments/edit.html.erb within layouts/application
+  Rendered shipments/_form.html.erb (Duration: 5.4ms | Allocations: 5011)
+  Rendered shipments/edit.html.erb within layouts/application (Duration: 6.2ms | Allocations: 5426)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 13ms (Views: 11.0ms | ActiveRecord: 0.1ms | Allocations: 11074)
+
+
+Started GET "/shipments/new" for ::1 at 2020-03-03 01:49:54 -0600
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ShipmentsController#new as HTML
+  Rendering shipments/new.html.erb within layouts/application
+  Rendered shipments/_form.html.erb (Duration: 13.7ms | Allocations: 7959)
+  Rendered shipments/new.html.erb within layouts/application (Duration: 14.9ms | Allocations: 8598)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 60ms (Views: 36.4ms | ActiveRecord: 2.6ms | Allocations: 33654)
+
+
+Started POST "/shipments" for ::1 at 2020-03-03 01:50:02 -0600
+Processing by ShipmentsController#create as HTML
+  Parameters: {"authenticity_token"=>"EzvKzgORCbql0V9R4CdhzIwGkVl8V2kiOMRzmNKZ+QoJgTzDgalLnABdlTdOnOqbdBKv6mC75eIhpojI+dTHqQ==", "shipment"=>{"code"=>"", "tracking"=>"", "date(1i)"=>"2020", "date(2i)"=>"3", "date(3i)"=>"3", "status"=>"", "carrier"=>"", "amount"=>"", "packages"=>"", "product"=>"", "weight"=>"", "length"=>"", "width"=>"", "height"=>"", "shipment"=>"", "note"=>""}, "commit"=>"Create Shipment"}
+  Rendering shipments/new.html.erb within layouts/application
+  Rendered shipments/_form.html.erb (Duration: 6.2ms | Allocations: 4545)
+  Rendered shipments/new.html.erb within layouts/application (Duration: 6.7ms | Allocations: 4653)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 17ms (Views: 13.0ms | ActiveRecord: 0.0ms | Allocations: 11470)
+
+
+Started GET "/shipments" for ::1 at 2020-03-03 01:50:29 -0600
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ShipmentsController#index as HTML
+  Rendering shipments/index.html.erb within layouts/application
+  [1m[36mShipment Load (0.2ms)[0m  [1m[34mSELECT "shipments".* FROM "shipments"[0m
+  ↳ app/views/shipments/index.html.erb:29
+  Rendered shipments/index.html.erb within layouts/application (Duration: 17.6ms | Allocations: 15045)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 27ms (Views: 22.1ms | ActiveRecord: 0.8ms | Allocations: 20814)
+
+
+Started GET "/shipments/new" for ::1 at 2020-03-03 01:50:30 -0600
+Processing by ShipmentsController#new as HTML
+  Rendering shipments/new.html.erb within layouts/application
+  Rendered shipments/_form.html.erb (Duration: 4.6ms | Allocations: 4177)
+  Rendered shipments/new.html.erb within layouts/application (Duration: 4.8ms | Allocations: 4284)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 10ms (Views: 9.5ms | ActiveRecord: 0.0ms | Allocations: 9278)
+
+
+Started POST "/shipments" for ::1 at 2020-03-03 01:50:34 -0600
+Processing by ShipmentsController#create as HTML
+  Parameters: {"authenticity_token"=>"n+BzMWRNsDu/Cl3kPdKV4qKc0dmafO//0Ly/4VcYd5iFWoU85nXyHRqGl4KTaR61WojvaoaQYz/J3kSxfFVJOw==", "shipment"=>{"code"=>"", "tracking"=>"", "date(1i)"=>"2020", "date(2i)"=>"3", "date(3i)"=>"3", "status"=>"", "carrier"=>"", "amount"=>"", "packages"=>"", "product"=>"", "weight"=>"", "length"=>"", "width"=>"", "height"=>"", "shipment"=>"", "note"=>""}, "commit"=>"Create Shipment"}
+  Rendering shipments/new.html.erb within layouts/application
+  Rendered shipments/_form.html.erb (Duration: 5.3ms | Allocations: 4662)
+  Rendered shipments/new.html.erb within layouts/application (Duration: 5.5ms | Allocations: 4768)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 13ms (Views: 10.1ms | ActiveRecord: 0.0ms | Allocations: 11722)
+
+
+Started GET "/shipments" for ::1 at 2020-03-03 01:50:58 -0600
+Processing by ShipmentsController#index as HTML
+  Rendering shipments/index.html.erb within layouts/application
+  [1m[36mShipment Load (0.1ms)[0m  [1m[34mSELECT "shipments".* FROM "shipments"[0m
+  ↳ app/views/shipments/index.html.erb:29
+  Rendered shipments/index.html.erb within layouts/application (Duration: 2.4ms | Allocations: 1788)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 7ms (Views: 6.7ms | ActiveRecord: 0.1ms | Allocations: 6743)
+
+
+Started GET "/shipments/1" for ::1 at 2020-03-03 01:51:02 -0600
+Processing by ShipmentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mShipment Load (0.2ms)[0m  [1m[34mSELECT "shipments".* FROM "shipments" WHERE "shipments"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/shipments_controller.rb:67:in `set_shipment'
+  Rendering shipments/show.html.erb within layouts/application
+  Rendered shipments/show.html.erb within layouts/application (Duration: 0.9ms | Allocations: 618)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 18ms (Views: 6.1ms | ActiveRecord: 0.2ms | Allocations: 13000)
+
+
+Started GET "/shipments" for ::1 at 2020-03-03 01:51:04 -0600
+Processing by ShipmentsController#index as HTML
+  Rendering shipments/index.html.erb within layouts/application
+  [1m[36mShipment Load (0.1ms)[0m  [1m[34mSELECT "shipments".* FROM "shipments"[0m
+  ↳ app/views/shipments/index.html.erb:29
+  Rendered shipments/index.html.erb within layouts/application (Duration: 2.8ms | Allocations: 1780)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 9ms (Views: 7.8ms | ActiveRecord: 0.1ms | Allocations: 6751)
+
+
+Started GET "/shipments/new" for ::1 at 2020-03-03 22:36:04 -0600
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ShipmentsController#new as HTML
+  Rendering shipments/new.html.erb within layouts/application
+  Rendered shipments/_form.html.erb (Duration: 4.0ms | Allocations: 4248)
+  Rendered shipments/new.html.erb within layouts/application (Duration: 4.3ms | Allocations: 4355)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 20ms (Views: 8.7ms | ActiveRecord: 0.0ms | Allocations: 21981)
+
+
+Started POST "/shipments" for ::1 at 2020-03-03 22:36:12 -0600
+Processing by ShipmentsController#create as HTML
+  Parameters: {"authenticity_token"=>"VXaPlfv3U9OXltsIHHeUDQ9tjsc4vzsS7eopzt6MExRPzHmYec8R9TIaEW6yzB9a93mwdCRTt9L0iNKe9cEttw==", "shipment"=>{"code"=>"", "tracking"=>"", "date(1i)"=>"2020", "date(2i)"=>"3", "date(3i)"=>"4", "status"=>"", "carrier"=>"", "amount"=>"", "packages"=>"", "product"=>"", "weight"=>"3", "length"=>"4", "width"=>"5", "height"=>"2", "shipment"=>"", "note"=>""}, "commit"=>"Create Shipment"}
+  [1m[35m (1.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/shipments_controller.rb:30:in `block in create'
+  [1m[36mShipment Create (0.5ms)[0m  [1m[32mINSERT INTO "shipments" ("code", "tracking", "date", "status", "carrier", "product", "weight", "length", "width", "height", "shipment", "note", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["code", ""], ["tracking", ""], ["date", "2020-03-04"], ["status", ""], ["carrier", ""], ["product", ""], ["weight", 3.0], ["length", 4.0], ["width", 5.0], ["height", 2.0], ["shipment", ""], ["note", ""], ["created_at", "2020-03-04 04:36:12.525525"], ["updated_at", "2020-03-04 04:36:12.525525"]]
+  ↳ app/controllers/shipments_controller.rb:30:in `block in create'
+  [1m[35m (1.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/shipments_controller.rb:30:in `block in create'
+Redirected to http://localhost:3000/shipments/7
+Completed 302 Found in 11ms (ActiveRecord: 3.5ms | Allocations: 3869)
+
+
+Started GET "/shipments/7" for ::1 at 2020-03-03 22:36:12 -0600
+Processing by ShipmentsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mShipment Load (0.2ms)[0m  [1m[34mSELECT "shipments".* FROM "shipments" WHERE "shipments"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/shipments_controller.rb:67:in `set_shipment'
+  Rendering shipments/show.html.erb within layouts/application
+  Rendered shipments/show.html.erb within layouts/application (Duration: 0.4ms | Allocations: 158)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 584ms (Views: 581.7ms | ActiveRecord: 0.2ms | Allocations: 6033)
+
+
+Started GET "/shipments" for ::1 at 2020-03-03 22:36:14 -0600
+Processing by ShipmentsController#index as HTML
+  Rendering shipments/index.html.erb within layouts/application
+  [1m[36mShipment Load (0.2ms)[0m  [1m[34mSELECT "shipments".* FROM "shipments"[0m
+  ↳ app/views/shipments/index.html.erb:29
+  Rendered shipments/index.html.erb within layouts/application (Duration: 5.2ms | Allocations: 3043)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.2ms | Allocations: 3578)
+
+
+  
+ActionView::Template::Error (nil can't be coerced into BigDecimal):
+    41:         <td><%= shipment.length %></td>
+    42:         <td><%= shipment.width %></td>
+    43:         <td><%= shipment.height %></td>
+    44:         <td><%= shipment.volumetric_weight %></td>
+    45:         <td><%= shipment.shipment %></td>
+    46:         <td><%= shipment.note %></td>
+    47:         <td><%= link_to 'Show', shipment %></td>
+  
+app/models/shipment.rb:5:in `*'
+app/models/shipment.rb:5:in `volumetric_weight'
+app/views/shipments/index.html.erb:44
+app/views/shipments/index.html.erb:29
+Started GET "/shipments" for ::1 at 2020-03-03 22:36:35 -0600
+Processing by ShipmentsController#index as HTML
+  Rendering shipments/index.html.erb within layouts/application
+  [1m[36mShipment Load (0.2ms)[0m  [1m[34mSELECT "shipments".* FROM "shipments"[0m
+  ↳ app/views/shipments/index.html.erb:29
+  Rendered shipments/index.html.erb within layouts/application (Duration: 2.5ms | Allocations: 2379)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.2ms | Allocations: 2931)
+
+
+  
+ActionView::Template::Error (nil can't be coerced into BigDecimal):
+    41:         <td><%= shipment.length %></td>
+    42:         <td><%= shipment.width %></td>
+    43:         <td><%= shipment.height %></td>
+    44:         <td><%= shipment.volumetric_weight %></td>
+    45:         <td><%= shipment.shipment %></td>
+    46:         <td><%= shipment.note %></td>
+    47:         <td><%= link_to 'Show', shipment %></td>
+  
+app/models/shipment.rb:5:in `*'
+app/models/shipment.rb:5:in `volumetric_weight'
+app/views/shipments/index.html.erb:44
+app/views/shipments/index.html.erb:29
+Started GET "/shipments" for ::1 at 2020-03-03 22:37:00 -0600
+Processing by ShipmentsController#index as HTML
+  Rendering shipments/index.html.erb within layouts/application
+  [1m[36mShipment Load (0.2ms)[0m  [1m[34mSELECT "shipments".* FROM "shipments"[0m
+  ↳ app/views/shipments/index.html.erb:29
+  Rendered shipments/index.html.erb within layouts/application (Duration: 3.0ms | Allocations: 2357)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.2ms | Allocations: 2889)
+
+
+  
+ActionView::Template::Error (nil can't be coerced into BigDecimal):
+    41:         <td><%= shipment.length %></td>
+    42:         <td><%= shipment.width %></td>
+    43:         <td><%= shipment.height %></td>
+    44:         <td><%= shipment.volumetric_weight %></td>
+    45:         <td><%= shipment.shipment %></td>
+    46:         <td><%= shipment.note %></td>
+    47:         <td><%= link_to 'Show', shipment %></td>
+  
+app/models/shipment.rb:5:in `*'
+app/models/shipment.rb:5:in `volumetric_weight'
+app/views/shipments/index.html.erb:44
+app/views/shipments/index.html.erb:29
+Started GET "/shipments" for ::1 at 2020-03-03 22:37:01 -0600
+Processing by ShipmentsController#index as HTML
+  Rendering shipments/index.html.erb within layouts/application
+  [1m[36mShipment Load (0.1ms)[0m  [1m[34mSELECT "shipments".* FROM "shipments"[0m
+  ↳ app/views/shipments/index.html.erb:29
+  Rendered shipments/index.html.erb within layouts/application (Duration: 2.3ms | Allocations: 2355)
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.1ms | Allocations: 2886)
+
+
+  
+ActionView::Template::Error (nil can't be coerced into BigDecimal):
+    41:         <td><%= shipment.length %></td>
+    42:         <td><%= shipment.width %></td>
+    43:         <td><%= shipment.height %></td>
+    44:         <td><%= shipment.volumetric_weight %></td>
+    45:         <td><%= shipment.shipment %></td>
+    46:         <td><%= shipment.note %></td>
+    47:         <td><%= link_to 'Show', shipment %></td>
+  
+app/models/shipment.rb:5:in `*'
+app/models/shipment.rb:5:in `volumetric_weight'
+app/views/shipments/index.html.erb:44
+app/views/shipments/index.html.erb:29
+Started GET "/shipments" for ::1 at 2020-03-03 22:37:02 -0600
+Processing by ShipmentsController#index as HTML
+  Rendering shipments/index.html.erb within layouts/application
+  [1m[36mShipment Load (0.2ms)[0m  [1m[34mSELECT "shipments".* FROM "shipments"[0m
+  ↳ app/views/shipments/index.html.erb:29
+  Rendered shipments/index.html.erb within layouts/application (Duration: 2.8ms | Allocations: 2355)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.2ms | Allocations: 2886)
+
+
+  
+ActionView::Template::Error (nil can't be coerced into BigDecimal):
+    41:         <td><%= shipment.length %></td>
+    42:         <td><%= shipment.width %></td>
+    43:         <td><%= shipment.height %></td>
+    44:         <td><%= shipment.volumetric_weight %></td>
+    45:         <td><%= shipment.shipment %></td>
+    46:         <td><%= shipment.note %></td>
+    47:         <td><%= link_to 'Show', shipment %></td>
+  
+app/models/shipment.rb:5:in `*'
+app/models/shipment.rb:5:in `volumetric_weight'
+app/views/shipments/index.html.erb:44
+app/views/shipments/index.html.erb:29
+Started GET "/shipments" for ::1 at 2020-03-03 22:37:02 -0600
+Processing by ShipmentsController#index as HTML
+  Rendering shipments/index.html.erb within layouts/application
+  [1m[36mShipment Load (0.2ms)[0m  [1m[34mSELECT "shipments".* FROM "shipments"[0m
+  ↳ app/views/shipments/index.html.erb:29
+  Rendered shipments/index.html.erb within layouts/application (Duration: 3.5ms | Allocations: 2355)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.2ms | Allocations: 2886)
+
+
+  
+ActionView::Template::Error (nil can't be coerced into BigDecimal):
+    41:         <td><%= shipment.length %></td>
+    42:         <td><%= shipment.width %></td>
+    43:         <td><%= shipment.height %></td>
+    44:         <td><%= shipment.volumetric_weight %></td>
+    45:         <td><%= shipment.shipment %></td>
+    46:         <td><%= shipment.note %></td>
+    47:         <td><%= link_to 'Show', shipment %></td>
+  
+app/models/shipment.rb:5:in `*'
+app/models/shipment.rb:5:in `volumetric_weight'
+app/views/shipments/index.html.erb:44
+app/views/shipments/index.html.erb:29
+Started GET "/shipments" for ::1 at 2020-03-03 22:37:02 -0600
+Processing by ShipmentsController#index as HTML
+  Rendering shipments/index.html.erb within layouts/application
+  [1m[36mShipment Load (0.2ms)[0m  [1m[34mSELECT "shipments".* FROM "shipments"[0m
+  ↳ app/views/shipments/index.html.erb:29
+  Rendered shipments/index.html.erb within layouts/application (Duration: 3.7ms | Allocations: 2355)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.2ms | Allocations: 2886)
+
+
+  
+ActionView::Template::Error (nil can't be coerced into BigDecimal):
+    41:         <td><%= shipment.length %></td>
+    42:         <td><%= shipment.width %></td>
+    43:         <td><%= shipment.height %></td>
+    44:         <td><%= shipment.volumetric_weight %></td>
+    45:         <td><%= shipment.shipment %></td>
+    46:         <td><%= shipment.note %></td>
+    47:         <td><%= link_to 'Show', shipment %></td>
+  
+app/models/shipment.rb:5:in `*'
+app/models/shipment.rb:5:in `volumetric_weight'
+app/views/shipments/index.html.erb:44
+app/views/shipments/index.html.erb:29
+Started GET "/shipments" for ::1 at 2020-03-03 22:37:13 -0600
+Processing by ShipmentsController#index as HTML
+  Rendering shipments/index.html.erb within layouts/application
+  [1m[36mShipment Load (0.1ms)[0m  [1m[34mSELECT "shipments".* FROM "shipments"[0m
+  ↳ app/views/shipments/index.html.erb:29
+  Rendered shipments/index.html.erb within layouts/application (Duration: 2.7ms | Allocations: 2355)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.1ms | Allocations: 2886)
+
+
+  
+ActionView::Template::Error (nil can't be coerced into BigDecimal):
+    41:         <td><%= shipment.length %></td>
+    42:         <td><%= shipment.width %></td>
+    43:         <td><%= shipment.height %></td>
+    44:         <td><%= shipment.volumetric_weight %></td>
+    45:         <td><%= shipment.shipment %></td>
+    46:         <td><%= shipment.note %></td>
+    47:         <td><%= link_to 'Show', shipment %></td>
+  
+app/models/shipment.rb:5:in `*'
+app/models/shipment.rb:5:in `volumetric_weight'
+app/views/shipments/index.html.erb:44
+app/views/shipments/index.html.erb:29
+Started GET "/shipments" for ::1 at 2020-03-03 22:39:07 -0600
+Processing by ShipmentsController#index as HTML
+  Rendering shipments/index.html.erb within layouts/application
+  [1m[36mShipment Load (0.1ms)[0m  [1m[34mSELECT "shipments".* FROM "shipments"[0m
+  ↳ app/views/shipments/index.html.erb:29
+  Rendered shipments/index.html.erb within layouts/application (Duration: 4.7ms | Allocations: 2355)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.1ms | Allocations: 2887)
+
+
+  
+ActionView::Template::Error (nil can't be coerced into BigDecimal):
+    41:         <td><%= shipment.length %></td>
+    42:         <td><%= shipment.width %></td>
+    43:         <td><%= shipment.height %></td>
+    44:         <td><%= shipment.volumetric_weight %></td>
+    45:         <td><%= shipment.shipment %></td>
+    46:         <td><%= shipment.note %></td>
+    47:         <td><%= link_to 'Show', shipment %></td>
+  
+app/models/shipment.rb:5:in `*'
+app/models/shipment.rb:5:in `volumetric_weight'
+app/views/shipments/index.html.erb:44
+app/views/shipments/index.html.erb:29
+Started GET "/shipments/new" for ::1 at 2020-03-03 22:39:09 -0600
+Processing by ShipmentsController#new as HTML
+  Rendering shipments/new.html.erb within layouts/application
+  Rendered shipments/_form.html.erb (Duration: 3.7ms | Allocations: 4179)
+  Rendered shipments/new.html.erb within layouts/application (Duration: 3.9ms | Allocations: 4285)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 10ms (Views: 9.7ms | ActiveRecord: 0.0ms | Allocations: 9297)
+
+
+Started GET "/shipments/new" for ::1 at 2020-03-03 22:41:05 -0600
+Processing by ShipmentsController#new as HTML
+  Rendering shipments/new.html.erb within layouts/application
+  Rendered shipments/_form.html.erb (Duration: 3.9ms | Allocations: 4161)
+  Rendered shipments/new.html.erb within layouts/application (Duration: 4.1ms | Allocations: 4267)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 9ms (Views: 8.9ms | ActiveRecord: 0.0ms | Allocations: 9246)
+
+
+Started GET "/shipments/new" for ::1 at 2020-03-03 22:41:12 -0600
+Processing by ShipmentsController#new as HTML
+  Rendering shipments/new.html.erb within layouts/application
+  Rendered shipments/_form.html.erb (Duration: 5.4ms | Allocations: 4161)
+  Rendered shipments/new.html.erb within layouts/application (Duration: 5.6ms | Allocations: 4267)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 12ms (Views: 11.0ms | ActiveRecord: 0.0ms | Allocations: 9248)
+
+
+Started GET "/shipments" for ::1 at 2020-03-03 22:41:52 -0600
+Processing by ShipmentsController#index as HTML
+  Rendering shipments/index.html.erb within layouts/application
+  [1m[36mShipment Load (0.1ms)[0m  [1m[34mSELECT "shipments".* FROM "shipments"[0m
+  ↳ app/views/shipments/index.html.erb:29
+  Rendered shipments/index.html.erb within layouts/application (Duration: 2.3ms | Allocations: 2355)
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.1ms | Allocations: 2902)
+
+
+  
+ActionView::Template::Error (nil can't be coerced into BigDecimal):
+    41:         <td><%= shipment.length %></td>
+    42:         <td><%= shipment.width %></td>
+    43:         <td><%= shipment.height %></td>
+    44:         <td><%= shipment.volumetric_weight %></td>
+    45:         <td><%= shipment.shipment %></td>
+    46:         <td><%= shipment.note %></td>
+    47:         <td><%= link_to 'Show', shipment %></td>
+  
+app/models/shipment.rb:5:in `*'
+app/models/shipment.rb:5:in `volumetric_weight'
+app/views/shipments/index.html.erb:44
+app/views/shipments/index.html.erb:29
+Started GET "/shipments/new" for ::1 at 2020-03-03 22:58:22 -0600
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ShipmentsController#new as HTML
+  Rendering shipments/new.html.erb within layouts/application
+  Rendered shipments/_form.html.erb (Duration: 4.4ms | Allocations: 4252)
+  Rendered shipments/new.html.erb within layouts/application (Duration: 4.7ms | Allocations: 4359)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 230ms (Views: 218.6ms | ActiveRecord: 0.0ms | Allocations: 22061)
+
+
+Started GET "/shipments/new" for ::1 at 2020-03-03 22:58:25 -0600
+Processing by ShipmentsController#new as HTML
+  Rendering shipments/new.html.erb within layouts/application
+  Rendered shipments/_form.html.erb (Duration: 4.0ms | Allocations: 4161)
+  Rendered shipments/new.html.erb within layouts/application (Duration: 4.2ms | Allocations: 4267)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 11ms (Views: 9.9ms | ActiveRecord: 0.0ms | Allocations: 9257)
+
+
+Started POST "/shipments" for ::1 at 2020-03-03 22:58:40 -0600
+Processing by ShipmentsController#create as HTML
+  Parameters: {"authenticity_token"=>"oRVLo8WWAdM8aiFcyPg3CO5sc6iFVu+R5NeXX3vIUrK2zCEO3PhPxgjTmbwUPn9uIAb8ylsJ5xAnpUG/sO8G5g==", "shipment"=>{"code"=>"", "tracking"=>"", "date(1i)"=>"2020", "date(2i)"=>"3", "date(3i)"=>"4", "status"=>"", "carrier"=>"", "amount"=>"", "packages"=>"", "product"=>"", "weight"=>"8", "length"=>"8", "width"=>"8", "height"=>"8", "shipment"=>"", "note"=>""}, "commit"=>"Create Shipment"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/shipments_controller.rb:30:in `block in create'
+  [1m[36mShipment Create (0.7ms)[0m  [1m[32mINSERT INTO "shipments" ("code", "tracking", "date", "status", "carrier", "product", "weight", "length", "width", "height", "shipment", "note", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["code", ""], ["tracking", ""], ["date", "2020-03-04"], ["status", ""], ["carrier", ""], ["product", ""], ["weight", 8.0], ["length", 8.0], ["width", 8.0], ["height", 8.0], ["shipment", ""], ["note", ""], ["created_at", "2020-03-04 04:58:40.893489"], ["updated_at", "2020-03-04 04:58:40.893489"]]
+  ↳ app/controllers/shipments_controller.rb:30:in `block in create'
+  [1m[35m (3.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/shipments_controller.rb:30:in `block in create'
+Redirected to http://localhost:3000/shipments/8
+Completed 302 Found in 10ms (ActiveRecord: 4.1ms | Allocations: 4452)
+
+
+Started GET "/shipments/8" for ::1 at 2020-03-03 22:58:40 -0600
+Processing by ShipmentsController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mShipment Load (0.2ms)[0m  [1m[34mSELECT "shipments".* FROM "shipments" WHERE "shipments"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/shipments_controller.rb:67:in `set_shipment'
+  Rendering shipments/show.html.erb within layouts/application
+  Rendered shipments/show.html.erb within layouts/application (Duration: 0.5ms | Allocations: 158)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 7ms (Views: 5.2ms | ActiveRecord: 0.2ms | Allocations: 5841)
+
+
+Started GET "/shipments" for ::1 at 2020-03-03 22:58:47 -0600
+Processing by ShipmentsController#index as HTML
+  Rendering shipments/index.html.erb within layouts/application
+  [1m[36mShipment Load (0.3ms)[0m  [1m[34mSELECT "shipments".* FROM "shipments"[0m
+  ↳ app/views/shipments/index.html.erb:29
+  Rendered shipments/index.html.erb within layouts/application (Duration: 3.3ms | Allocations: 2250)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 10ms (Views: 8.7ms | ActiveRecord: 0.3ms | Allocations: 7222)
+
+
