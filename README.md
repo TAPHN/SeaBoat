@@ -12,3 +12,13 @@ foo@bar:~$ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.2/install
 
 ```
 
+# Code contributions
+
+1. Fork it
+2. Add new features
+```bash
+git checkout -b my-new-feature
+git commit -am 'Add some feature'
+git push origin my-new-feature
+```
+3. Create a pull request
