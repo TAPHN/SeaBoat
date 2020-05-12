@@ -1,6 +1,6 @@
 # SeaBoat
 
-A ruby on rails app use to handle shipments between countries. 
+A ruby on rails app used to handle shipments between countries. 
 
 # Deployment instructions
 ```console
