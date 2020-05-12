@@ -1,7 +1,8 @@
-# README
+# SeaBoat
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+A ruby on rails app use to handle shipments between countries. 
+
+# Getting started
 
 Things you may want to cover:
 
@@ -30,4 +31,3 @@ foo@bar:~$ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.2/install
 
 ```
 
-* ...
